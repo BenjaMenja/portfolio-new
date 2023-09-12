@@ -25,7 +25,7 @@ function Project(props) {
                 <Row xs={'2'}>
                     <Col>
                         <CardBody>
-                            <img src={props.imgsrc} alt="Uh oh" width='50%' height='auto'/>
+                            <img src={props.imgsrc} alt="Uh oh" width='80%' height='auto'/>
                         </CardBody>
                     </Col>
                     <Col>
