@@ -9,6 +9,7 @@ import PokemonBlitz from "./pages/pokemonblitz";
 import RoyalSiege from "./pages/royalsiege";
 import TheGreatEscape from "./pages/thegreatescape";
 import FooterBar from "./components/FooterBar";
+import Resume from "./pages/Resume";
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
                 <Route exact path={'/'} element={<Home />}/>
                 <Route exact path={'/about'} element={<About /> }/>
                 <Route exact path={'/projects'} element={<Projects />}/>
-                <Route exact path={'/dragonfly'} element={<Dragonfly />}/>
+                <Route exact path={'/game-engine'} element={<Dragonfly />}/>
                 <Route exact path={'/pokemon-blitz'} element={<PokemonBlitz />}/>
                 <Route exact path={'/royal-siege'} element={<RoyalSiege />}/>
                 <Route exact path={'/the-great-escape'} element={<TheGreatEscape />}/>
+                <Route exact path={'/resume'} element={<Resume />}/>
             </Routes>
         </Router>
         <FooterBar />

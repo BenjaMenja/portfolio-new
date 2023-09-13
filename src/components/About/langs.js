@@ -1,4 +1,4 @@
-import {Card, CardBody, CardText, CardTitle, Col, Row} from "reactstrap";
+import {Card, CardText, Col, Row} from "reactstrap";
 
 function Languages(props) {
     let bgColor = 'rgba(0,0,0,0)'

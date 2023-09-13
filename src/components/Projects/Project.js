@@ -1,4 +1,4 @@
-import {Button, Card, CardBody, CardTitle, Col, Row} from "reactstrap";
+import {Button, Card, CardBody, Col, Row} from "reactstrap";
 import {useEffect, useState} from "react";
 import ProjectStatus from "./projectstatus";
 

@@ -10,7 +10,7 @@ function TheGreatEscape() {
 
             <Button color='primary' size={'lg'} style={{marginBottom: '2rem'}} onClick={() => window.location.href='https://github.com/BenjaMenja/The-Great-Escape/releases/tag/v1.1.0-alpha'}>Download</Button>
 
-            <Card style={{
+            <Card className={'border-0'} style={{
                 background: bgColor,
                 marginLeft: '15vw',
                 width: '70vw',
