@@ -35,7 +35,7 @@ function Project(props) {
                         <ProjectStatus teamsize={props.status.teamsize} isDone={props.status.isDone} role={props.status.role} tools={props.status.tools} dates={props.status.dates}/>
                         <Button color="primary" onClick={() => {
                             window.location.href = '/' + props.project
-                        }}>
+                        }} style={{marginBottom: '1rem'}}>
                             Learn More
                         </Button>
                     </Col>
@@ -63,7 +63,7 @@ function Project(props) {
                             <ProjectStatus teamsize={props.status.teamsize} isDone={props.status.isDone} role={props.status.role} tools={props.status.tools} dates={props.status.dates}/>
                             <Button color="primary" onClick={() => {
                                 window.location.href = '/' + props.project
-                            }}>
+                            }} style={{marginBottom: '1rem'}}>
                                 Learn More
                             </Button>
                         </Col>

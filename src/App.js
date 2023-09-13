@@ -8,6 +8,7 @@ import Dragonfly from "./pages/dragonfly";
 import PokemonBlitz from "./pages/pokemonblitz";
 import RoyalSiege from "./pages/royalsiege";
 import TheGreatEscape from "./pages/thegreatescape";
+import FooterBar from "./components/FooterBar";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
                 <Route exact path={'/the-great-escape'} element={<TheGreatEscape />}/>
             </Routes>
         </Router>
-
+        <FooterBar />
     </div>
   );
 }
