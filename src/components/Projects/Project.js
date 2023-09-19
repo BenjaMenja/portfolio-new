@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import ProjectStatus from "./projectstatus";
 
 function Project(props) {
-    let bgColor = 'rgba(0,0,0,0)'
+    let bgColor = 'rgba(136, 196, 236, 1)'
     const [width, setWidth] = useState(window.innerWidth)
     useEffect(() => {
         function handleResize() {
@@ -19,7 +19,7 @@ function Project(props) {
                 background: bgColor,
                 marginLeft: '10vw',
                 marginBottom: '5rem',
-                color: '#FFFFFF'
+                color: '#000000'
             }}>
                 <h2 style={{marginBottom: '1rem', marginTop: '1rem'}}>{props.title}</h2>
                 <Row xs={'2'}>
