@@ -16,7 +16,7 @@ function PokemonBlitz() {
                     color: '#FFFFFF'
                 }}>
                     <i>Pokemon Blitz </i>
-                    is a 2D bullet hell game built using my <a href={'/game-engine'}>ASCII C++ game engine</a>.
+                    is a 2D bullet hell game built using my <a style={{color: "#95C0FE"}} href={'/game-engine'}>ASCII C++ game engine</a>.
                     The goal is to survive as long as possible against the endless wave of flying Pokeballs and Voltorbs traveling across the map.
                     You can choose between three playable Pokemon, each with their own unique set of moves to aid in survival.
                     You can gain points every second you're alive and by destroying enemies with your moves.
