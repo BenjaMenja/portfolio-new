@@ -8,7 +8,7 @@ function About() {
             <Row xs={'2'} style={{marginBottom: '3rem'}}>
                 <Col style={{paddingLeft: '10%', textAlign: 'left'}}>
                     <p>
-                        Hello! I'm Ben Gelinas, and I am a Computer Science and Game Development student from Massachusetts. I like to work on team-based projects that include Web applications and games.<br></br><br></br>
+                        Hello! I'm Ben Gelinas, and I am a Computer Science and Game Development student from Massachusetts. I like to work on team-based projects that include games, tools for games, and web applications.<br></br><br></br>
                         I have experience with languages such as C/C++, C#, Java, JavaScript, and Blueprints. A full list of languages and development tools I use can be found below.<br></br><br></br>
                         Outside of project work, I also enjoy:
                         <List>

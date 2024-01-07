@@ -1,9 +1,18 @@
-import {Nav, Navbar, NavbarBrand, NavItem, NavLink} from "reactstrap";
+import {Button, Nav, Navbar, NavbarBrand, NavItem, NavLink} from "reactstrap";
+import {useEffect, useState} from "react";
 
 function MyNavbar() {
+    const [width, setWidth] = useState(window.innerWidth)
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth)
+            console.log(width)
+        }
+        window.addEventListener('resize', handleResize)
+    }, [])
     return (
         <>
-            <Navbar style={{
+            {(width > 768) ? <Navbar style={{
                 background: '#000000',
                 display: 'flex',
                 height: '8.5vh',
@@ -40,7 +49,18 @@ function MyNavbar() {
                         </NavLink>
                     </NavItem>
                 </Nav>
-            </Navbar>
+            </Navbar> : <div style={{
+                background: '#000000',
+                height: '7.5vh',
+                marginBottom: '5rem',
+                fontSize: '1rem',
+                alignItems: "center",
+            }}>
+                <Button style={{background: '#000000', border: '0px'}} onClick={() => console.log("hi")}>
+                    <i className={'bi bi-list'}></i>
+                </Button>
+            </div>}
+
         </>
     )
 }

@@ -12,7 +12,7 @@ function Languages(props) {
             }}>
                 <Col/>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -29,7 +29,7 @@ function Languages(props) {
                     </Card>
                 </Col>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -46,7 +46,7 @@ function Languages(props) {
                     </Card>
                 </Col>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -64,7 +64,7 @@ function Languages(props) {
                     </Card>
                 </Col>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -83,7 +83,7 @@ function Languages(props) {
                     </Card>
                 </Col>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -101,7 +101,7 @@ function Languages(props) {
             <Row xs={'7'}>
                 <Col/>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -118,7 +118,7 @@ function Languages(props) {
                     </Card>
                 </Col>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -136,7 +136,7 @@ function Languages(props) {
                 </Col>
                 <Col/>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>
@@ -153,7 +153,7 @@ function Languages(props) {
                     </Card>
                 </Col>
                 <Col>
-                    <Card outline color="light" style={{
+                    <Card className={'shadow-lg'} outline color="light" style={{
                         textAlign: "center",
                         background: bgColor
                     }}>

@@ -13,13 +13,13 @@ function Project(props) {
     }, [])
     return (
         <div>
-            {(width > 768) ? <Card outline color="light" style={{
+            {(width > 768) ? <Card className={'shadow-lg'} outline color="light" style={{
                 width: '80vw',
                 textAlign: 'center',
-                background: bgColor,
+                backgroundColor: bgColor,
                 marginLeft: '10vw',
                 marginBottom: '5rem',
-                color: '#000000'
+                border: 'none'
             }}>
                 <h2 style={{marginBottom: '1rem', marginTop: '1rem'}}>{props.title}</h2>
                 <Row xs={'2'}>
@@ -41,13 +41,13 @@ function Project(props) {
                     </Col>
                 </Row>
             </Card> : <>
-                <Card outline color="light" style={{
+                <Card className={'shadow-lg'} outline color="light" style={{
                     width: '80vw',
                     textAlign: 'center',
-                    background: bgColor,
                     marginLeft: '10vw',
                     marginBottom: '5rem',
-                    color: '#FFFFFF'
+                    backgroundColor: bgColor,
+                    border: 'none'
                 }}>
                     <h2 style={{marginBottom: '1rem', marginTop: '1rem'}}>{props.title}</h2>
                     <Row xs={'2'}>
