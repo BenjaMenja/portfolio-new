@@ -5,8 +5,8 @@ function MyNavbar() {
     const [width, setWidth] = useState(window.innerWidth)
     useEffect(() => {
         function handleResize() {
-            setWidth(window.innerWidth)
-            console.log(width)
+            const newwidth = window.innerWidth
+            setWidth(newwidth)
         }
         window.addEventListener('resize', handleResize)
     }, [])
@@ -41,11 +41,6 @@ function MyNavbar() {
                     <NavItem>
                         <NavLink href="/projects" style={{color: '#FFFFFF', fontSize: '1.5rem'}}>
                             Projects
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/resume" style={{color: '#FFFFFF', fontSize: '1.5rem'}}>
-                            Resume
                         </NavLink>
                     </NavItem>
                 </Nav>

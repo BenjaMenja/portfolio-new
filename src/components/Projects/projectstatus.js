@@ -1,8 +1,6 @@
-
-
 function ProjectStatus(props) {
     return (
-        <div style={{color: '#000000', textAlign: 'left', fontSize: '1.5rem'}}>
+        <div style={{color: '#000000', textAlign: ((props.width > 768) ? 'left' : 'center'), fontSize: '1.5rem'}}>
             <p>
                 <b>Team Size:</b> {props.teamsize} <br></br>
                 <b>Role:</b> {props.role} <br></br>
