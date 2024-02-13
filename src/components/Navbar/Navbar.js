@@ -47,7 +47,7 @@ function MyNavbar() {
                 </Nav>
             </Navbar> : <div style={{
                 background: '#000000',
-                height: '7.5vh',
+                height: '8.5vh',
                 marginBottom: '5rem',
                 fontSize: '1rem',
                 alignItems: "center",
