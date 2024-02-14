@@ -3,11 +3,12 @@
   background-color: #294F70;
   min-height: 100vh;
   min-width: 100vw;
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 #root {
   --background-color: #000000;
+  --text-color: #FFFFFF;
 }
 
 .App-header {
@@ -17,6 +18,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.footer-bar {
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
 }
 
 .small-dropdown {
@@ -42,3 +55,77 @@
   cursor: pointer;
   background-color: #2a2a2a;
 }
+
+.about-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-link-svg {
+  transition: color 1000ms ease;
+}
+
+.about-link-svg:hover {
+  fill: #ababab;
+}
+
+.about-small-screen {
+  margin-bottom: 3rem;
+}
+.about-small-screen p {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+.about-small-screen ul li {
+  list-style-type: none;
+  font-size: 0.9em;
+}
+
+.about-small-screen .about-flex-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-small-screen .about-flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-small-screen .contact-info {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-small-screen .contact-info .find-me-on {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.languages-and-tools h2 {
+  margin-bottom: 3vmin;
+}
+
+.languages-and-tools .container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  justify-content: center;
+  margin-bottom: 3vmin;
+}
+
+.languages-and-tools .lang-tool {
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+  max-width: 12.5vw;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  font-size: calc(0.5rem + 0.5vw);
+}
+
+
