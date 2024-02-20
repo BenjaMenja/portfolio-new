@@ -13,21 +13,10 @@ function MyNavbar() {
     }, [])
     return (
         <>
-            {(width > 768) ? <Navbar style={{
-                background: '#000000',
-                display: 'flex',
-                height: '8.5vh',
-                marginBottom: '5rem',
-                fontSize: '1rem',
-                alignItems: "center",
-            }}>
-                <NavbarBrand href="/" style={{
-                    color: "#FFFFFF",
-                    marginLeft: '5%',
-                    fontSize: '1.5rem'
-                }}>
+            {(width > 768) ? <Navbar className={'custom-navbar'}>
+                <p className={'custom-navbar-name'}>
                     Benjamin Gelinas
-                </NavbarBrand>
+                </p>
                 <Nav className={"ms-auto"}>
                     <NavItem>
                         <NavLink href={"/"} style={{color: '#FFFFFF', fontSize: '1.5rem'}}>
@@ -45,13 +34,7 @@ function MyNavbar() {
                         </NavLink>
                     </NavItem>
                 </Nav>
-            </Navbar> : <div style={{
-                background: '#000000',
-                height: '8.5vh',
-                marginBottom: '5rem',
-                fontSize: '1rem',
-                alignItems: "center",
-            }}>
+            </Navbar> : <div className={'custom-navbar'}>
                 <Button style={{background: '#000000', border: '0px'}} onClick={() => setDropdownOpen(!dropdownOpen)}>
                     <i className={'bi bi-list'}></i>
                 </Button>

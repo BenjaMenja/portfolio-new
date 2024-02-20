@@ -7,7 +7,7 @@ import mergemonasteryimg from "../images/merge-monastery-logo.png"
 
 function Projects() {
     return (
-        <div style={{color: '#FFFFFF'}}>
+        <div style={{color: '#FFFFFF',marginTop: '7.5rem'}}>
             <h1 style={{marginBottom: '5rem'}}>Projects</h1>
             <Project title="The Great Escape" imgsrc={greatescapeimg}
                      desc="A third person stealth mission game where you play as a rebellious teenager who is determined to sneak out of the house to attend a party."

@@ -20,6 +20,25 @@
   color: white;
 }
 
+.custom-navbar {
+  position: fixed;
+  z-index: 999;
+  background: #000000;
+  height: 8.5vh;
+  min-width: 100vw;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.custom-navbar-name {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+  margin-left: 2%;
+  margin-bottom: 0;
+}
+
 .footer-bar {
   font-size: 1.1rem;
   margin-top: 3rem;

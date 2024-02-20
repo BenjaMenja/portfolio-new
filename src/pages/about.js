@@ -13,7 +13,7 @@ function About() {
         window.addEventListener('resize', handleResize)
     }, [])
     return (
-        <div style={{color: '#FFFFFF'}}>
+        <div style={{color: '#FFFFFF', marginTop: '7.5rem'}}>
             {(width > 768) ? <AboutLargeScreen /> : <AboutSmallScreen />}
 
             <Languages margin={'7rem'} width={width}/>
@@ -22,7 +22,7 @@ function About() {
     )
 }
 
-function GithubButton() {
+export function GithubButton() {
     return (
         <Button style={{backgroundColor: 'rgba(0,0,0,0)', borderColor: 'rgba(0,0,0,0)'}} onClick={() => {window.location.href="https://github.com/BenjaMenja"}}>
             <svg fill={"#FFFFFF"} className={"about-link-svg"} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 64 64">
@@ -32,7 +32,7 @@ function GithubButton() {
     )
 }
 
-function LinkedInButton() {
+export function LinkedInButton() {
     return (
         <Button style={{backgroundColor: 'rgba(0,0,0,0)', borderColor: 'rgba(0,0,0,0)'}} onClick={() => {window.location.href="https://www.linkedin.com/in/benjamin-gelinas-4679b723b"}}>
             <svg fill={"#FFFFFF"} className={"about-link-svg"} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 64 64">
