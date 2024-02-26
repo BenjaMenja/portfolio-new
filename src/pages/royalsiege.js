@@ -16,7 +16,7 @@ function RoyalSiege() {
                     textAlign: 'left'
                 }}>
                     <i>Royal Siege </i>
-                    is a team-based MOBA game built in <i>Minecraft</i> using the game's <a href="https://minecraft.fandom.com/wiki/Data_pack" style={{color: "#95C0FE"}}>data pack</a> and <a href="https://minecraft.fandom.com/wiki/Resource_pack" style={{color: "#95C0FE"}}>resource pack</a> system.
+                    is a team-based MOBA game built in <i>Minecraft</i> using the game's <a href="https://minecraft.fandom.com/wiki/Data_pack">data pack</a> and <a href="https://minecraft.fandom.com/wiki/Resource_pack">resource pack</a> system.
                     The goal of the game is to slay the opposing team's king using your character's unique set of weapons, abilities, and shops.
                     <br></br>
                     <br></br>
@@ -53,7 +53,7 @@ function RoyalSiege() {
                     Note: As the game was built in Minecraft, a preexisting game, Royal Siege is subject to the limitations of Minecraft, but is also aided by the existing mechanics, objects, and engine that Minecraft runs on.
                     <br></br>
                     <br></br>
-                    If you would like to see more of Royal Siege, please <a href="/royal-siege-gallery" style={{color: "#95C0FE"}}>click here</a> to view a photo gallery of Royal Siege screenshots.
+                    If you would like to see more of Royal Siege, please <a href="/royal-siege-gallery">click here</a> to view a photo gallery of Royal Siege screenshots.
                     <br></br>
                     <br></br>
                 </CardText>

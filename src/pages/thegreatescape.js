@@ -57,7 +57,7 @@ function TheGreatEscape() {
                         <li>Puzzle Progression</li>
                         <li>Hint and Dialogue System</li>
                         <li>Art integration into Blueprints</li>
-                        <li>Website (Can be found <a style={{color: "#95C0FE"}} href={'https://benjamenja.github.io/the-great-escape-website/'}>here</a>).</li>
+                        <li>Website (Can be found <a href={'https://benjamenja.github.io/the-great-escape-website/'}>here</a>).</li>
                     </List>
                 </CardText>
             </Card>

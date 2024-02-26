@@ -9,6 +9,11 @@
 #root {
   --background-color: #000000;
   --text-color: #FFFFFF;
+  --link-color: #95C0FE;
+}
+
+.App a {
+  color: var(--link-color);
 }
 
 .App-header {
