@@ -13,7 +13,7 @@ function MergeMonastery() {
     }, [])
     return (
         <>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem'}}>Merge Monastery</h1>
+            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Merge Monastery</h1>
             {(width > 768) ? <img src={image} alt="Uh oh" width={visualViewport.width * 0.3} height={visualViewport.height * 0.3} style={{marginBottom: '10rem'}}/> :
                 <img src={image} alt="Uh oh" width={visualViewport.width * 0.9} height={visualViewport.height * 0.3} style={{marginBottom: '5rem'}}/>}
 

@@ -13,7 +13,7 @@ function About() {
         window.addEventListener('resize', handleResize)
     }, [])
     return (
-        <div style={{color: '#FFFFFF', marginTop: '7.5rem'}}>
+        <div style={{color: '#FFFFFF',marginTop: "5rem"}}>
             {(width > 768) ? <AboutLargeScreen /> : <AboutSmallScreen />}
 
             <Languages margin={'7rem'} width={width}/>

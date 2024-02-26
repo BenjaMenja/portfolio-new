@@ -7,7 +7,7 @@ import mergemonasteryimg from "../images/merge-monastery-logo.png"
 
 function Projects() {
     return (
-        <div style={{color: '#FFFFFF',marginTop: '7.5rem'}}>
+        <div style={{color: '#FFFFFF',marginTop: "5rem"}}>
             <h1 style={{marginBottom: '5rem'}}>Projects</h1>
             <Project title="The Great Escape" imgsrc={greatescapeimg}
                      desc="A third person stealth mission game where you play as a rebellious teenager who is determined to sneak out of the house to attend a party."
@@ -17,8 +17,8 @@ function Projects() {
                      desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 14 unique characters, four maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
                      project="royal-siege"
                      status={{teamsize: '4-7', isDone: 'No', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
-            <Project title="ASCII C++ Game Engine" imgsrc={saucerimg}
-                     desc="An ASCII art game engine capable of providing a code framework necessary to build 2D text-based video games. Based off of Mark Claypool's game engine, Dragonfly."
+            <Project title="2D C++ Game Engine" imgsrc={saucerimg}
+                     desc="A 2D game engine capable of providing a code framework necessary to build ASCII text-based video games. Based off of Mark Claypool's game engine, Dragonfly."
                      project="game-engine"
                      status={{teamsize: 1, isDone: 'Yes', role: "Programmer", tools: "C++ / Visual Studio", dates: 'January 2023 - March 2023'}}/>
             <Project title="Pokemon Blitz" imgsrc={pokemonblitzimg}

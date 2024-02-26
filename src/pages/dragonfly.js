@@ -4,7 +4,7 @@ function GameEngine() {
     let bgColor = 'rgba(0,0,0,0)'
     return (
         <div>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem'}}>ASCII C++ Game Engine</h1>
+            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>ASCII C++ Game Engine</h1>
             <img src={image} alt="Uh oh" width={visualViewport.width * 0.5} height={'auto'} style={{marginBottom: '10rem'}}/>
             <Card className={'border-0'} style={{
                 background: bgColor,

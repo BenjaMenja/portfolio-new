@@ -5,7 +5,7 @@ function TheGreatEscape() {
     let bgColor = 'rgba(0,0,0,0)'
     return (
         <>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem'}}>The Great Escape</h1>
+            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>The Great Escape</h1>
             <img src={image} alt={'Uh oh'} width={visualViewport.width * 0.5} height={visualViewport.height * 0.6} style={{marginBottom: '8rem'}}/><br/>
 
             <Button color='primary' size={'lg'} style={{marginBottom: '2rem'}} onClick={() => window.location.href='https://github.com/BenjaMenja/The-Great-Escape/releases/tag/v1.1.0-alpha'}>Download</Button>

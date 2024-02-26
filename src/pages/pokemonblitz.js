@@ -4,7 +4,7 @@ function PokemonBlitz() {
     let bgColor = 'rgba(0,0,0,0)'
     return (
         <div>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem'}}>Pokemon Blitz</h1>
+            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Pokemon Blitz</h1>
             <img src={image} alt="Uh oh" width={visualViewport.width * 0.33} height={visualViewport.height * 0.4} style={{marginBottom: '10rem'}}/>
             <Card className={'border-0'} style={{
                 background: bgColor,
