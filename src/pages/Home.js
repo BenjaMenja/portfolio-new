@@ -8,7 +8,9 @@ import saucerimg from "../images/saucer-shoot.png";
 function Home() {
     return (
         <div style={{color: '#FFFFFF'}}>
-            <h1 style={{marginBottom: '5rem',marginTop: "5rem"}}>Featured Projects</h1>
+            <p>Thank you for checking out my portfolio!</p>
+            <p>Feel free to take a look at some of my featured projects below,</p>
+            <p style={{marginBottom: '3rem'}}>or learn more about me by pressing the About button!</p>
             <Project title="The Great Escape" imgsrc={greatescapeimg}
                      desc="A third person stealth mission game where you play as a rebellious teenager who is determined to sneak out of the house to attend a party."
                      project="the-great-escape"
