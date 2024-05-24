@@ -12,6 +12,7 @@ import FooterBar from "./components/FooterBar";
 import Resume from "./pages/Resume";
 import MergeMonastery from "./pages/mergemonastery";
 import Gallery from "./pages/gallery";
+import ColorClash from "./pages/colorclash";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                 <Route exact path={'/royal-siege'} element={<RoyalSiege />}/>
                 <Route exact path={'/the-great-escape'} element={<TheGreatEscape />}/>
                 <Route exact path={'/merge-monastery'} element={<MergeMonastery />} />
+                <Route exact path={'/color-clash'} element={<ColorClash />} />
                 <Route exact path={'/royal-siege-gallery'} element={<Gallery />} />
                 <Route exact path={'/resume'} element={<Resume />}/>
             </Routes>
