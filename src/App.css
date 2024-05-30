@@ -174,4 +174,20 @@
   font-size: calc(0.5rem + 0.5vw);
 }
 
+.mini-projects table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.mini-projects td {
+  height: 20px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.mini-projects a {
+  color: #0000ee;
+}
+
+
 

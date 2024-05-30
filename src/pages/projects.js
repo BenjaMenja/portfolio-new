@@ -5,11 +5,22 @@ import royalsiegelogo from "../images/royal-siege-logo.png";
 import pokemonblitzimg from "../images/pokemon-blitz.png";
 import mergemonasteryimg from "../images/merge-monastery-logo.png"
 import colorclashimg from "../images/color-clash.png"
+import {Button, Card} from "reactstrap";
 
 function Projects() {
     return (
         <div style={{color: '#FFFFFF',marginTop: "5rem"}}>
-            <h1 style={{marginBottom: '5rem'}}>Projects</h1>
+            <table style={{width: '100%', tableLayout: 'fixed', marginBottom: '5rem'}}>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h1>Projects</h1>
+                    </td>
+                    <td>
+                        <MiniProjectDisplay />
+                    </td>
+                </tr>
+            </table>
             <Project title="Color Clash" imgsrc={colorclashimg}
                      desc="A first person shooter game that follows a 1v1 deathmatch format. Earn more eliminations than your opponent to win, and paint the floor to enhance your movement! Part of a larger research project titled &quot;Exploring Adaptive Time Delay in First Person Shooter Games&quot;."
                      project="color-clash"
@@ -37,4 +48,36 @@ function Projects() {
         </div>
     )
 }
+
+function MiniProjectDisplay() {
+    let bgColor = 'rgba(136, 196, 236, 1)'
+    return (
+        <Card className={'shadow-lg'} outline color={"light"} style={{
+            width: '75%',
+            alignItems: 'center',
+            backgroundColor: bgColor,
+            border: 'none'
+        }}>
+            <table style={{width: '100%', tableLayout: 'fixed'}}>
+                <tr>
+                    <td style={{textAlign: 'right'}}>
+                        <i className={"bi bi-gear-wide-connected"}></i>
+                    </td>
+                    <td>
+                        <h4 style={{marginTop: '1rem'}}>Mini Projects</h4>
+                    </td>
+                    <td>
+                        <Button color="primary" onClick={() => {
+                            window.location.href = '/mini-projects'
+                        }}>
+                            Learn More
+                        </Button>
+                    </td>
+                </tr>
+            </table>
+            <p>A collection of mini projects I've contributed to or developed myself</p>
+        </Card>
+    )
+}
+
 export default Projects

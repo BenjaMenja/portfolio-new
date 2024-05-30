@@ -13,6 +13,7 @@ import Resume from "./pages/Resume";
 import MergeMonastery from "./pages/mergemonastery";
 import Gallery from "./pages/gallery";
 import ColorClash from "./pages/colorclash";
+import MiniProjects from "./pages/miniprojects";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                 <Route exact path={'/the-great-escape'} element={<TheGreatEscape />}/>
                 <Route exact path={'/merge-monastery'} element={<MergeMonastery />} />
                 <Route exact path={'/color-clash'} element={<ColorClash />} />
+                <Route exact path={'/mini-projects'} element={<MiniProjects />} />
                 <Route exact path={'/royal-siege-gallery'} element={<Gallery />} />
                 <Route exact path={'/resume'} element={<Resume />}/>
             </Routes>
