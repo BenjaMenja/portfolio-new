@@ -2,6 +2,7 @@ import {Button, Col, List, Row} from "reactstrap";
 import Languages from "../components/About/langs";
 import {useEffect, useState} from "react";
 import DevTools from "../components/About/devtools";
+import Obfuscate from "react-obfuscate";
 
 function About() {
     const [width, setWidth] = useState(window.innerWidth)
@@ -58,7 +59,7 @@ function AboutLargeScreen() {
         </Col>
         <Col>
             <h3>Contact me</h3>
-            <p style={{marginBottom: '5rem'}}>benjamenjalinas@gmail.com</p>
+            <Obfuscate style={{marginBottom: '4rem', display: 'inline-block'}} email={"benjamenjalinas@gmail.com"} />
             <h3>Find me on:</h3>
             <div className={"about-links"}>
                 <GithubButton />
@@ -84,7 +85,7 @@ function AboutSmallScreen() {
             <div className={"about-flex-horizontal contact-info"}>
                 <div className={"about-flex-vertical"}>
                     <h3><b>Contact me</b></h3>
-                    <p style={{marginBottom: '5rem'}}>benjamenjalinas@gmail.com</p>
+                    <Obfuscate style={{marginBottom: '4rem', display: 'inline-block'}} email={"benjamenjalinas@gmail.com"} />
                 </div>
                 <div className={"about-flex-vertical find-me-on"}>
                     <h3><b>Find me on:</b></h3>

@@ -1,5 +1,6 @@
 import image from '../images/color-clash.png'
 import conditions from '../images/adaptive-time-delay-conditions.png'
+import Obfuscate from 'react-obfuscate'
 import {Card} from "reactstrap";
 function ColorClash() {
     let bgColor = 'rgba(0,0,0,0)'
@@ -14,6 +15,8 @@ function ColorClash() {
                 width: '70vw',
                 textAlign: 'left'
             }}>
+                <h3>Publication</h3>
+                <p>Publication is available by emailing me at <Obfuscate email={"benjamenjalinas@gmail.com"} />.</p><br/>
                 <h3>What is it?</h3>
                 Exploring Adaptive Time Delay in First Person Shooter Games is a research project conducted to fulfill the Major Qualifying Project degree requirement at Worcester Polytechnic Institute. We designed, implemented, and tested Adaptive Time Delay,
                 a latency compensation technique that aims to maintain fairness and improve Quality of Experience for players experiencing different amounts of network latency.<br/><br/>
@@ -33,7 +36,9 @@ function ColorClash() {
                 <h3>Color Clash</h3>
                 <p>In order to test the efficacy of this modification, we designed <i>Color Clash</i>. Color Clash is a first person shooter game that follows a 1v1 deathmatch format, and was used as our platform to both
                     implement Adaptive Time Delay and test it. Using Unity with the Netcode for Game Objects library, we constructed an online multiplayer FPS game with essential game mechanics such as movement, jumping, shooting, and a scoring system.
-                    To give players an objective that doesn't involve player interaction, players can paint tiles on the floor with a pre-assigned color that lets them modify their movement speed depending on the color tile they stand on.<br/><br/></p>
+                    To give players an objective that doesn't involve player interaction, players can paint tiles on the floor with a pre-assigned color that lets them modify their movement speed depending on the color tile they stand on.</p>
+                <iframe src={"https://youtube.com/embed/3ZuBi2--otA"} allow={'autoplay; encrypted-media'} allowFullScreen title={'Color Clash'} style={{alignSelf: 'center', width: '75%', height: '50vh'}}/>
+                <br/><br/>
                 <h3>User Study & Data Collection</h3>
                 <p>We conducted a user study to gather qualitative and quantitative data on the efficacy of Adaptive Time Delay on performance, fairness, and QoE. We modified Color Clash to have a round system, with each round lasting 50 seconds and applying
                 different amounts of latency to one player and either no latency, time delay, or adaptive time delay to the other player. After each round, participants filled out an in-game questionnaire to gather qualitative information on their experience
