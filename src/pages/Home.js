@@ -1,8 +1,8 @@
 import Project from "../components/Projects/Project";
 import greatescapeimg from "../images/living_room_kitchen2.png"
-import {Button, Col, Row} from "reactstrap";
+import {Button} from "reactstrap";
 import mergemonasteryimg from "../images/merge-monastery-logo.png";
-import {GithubButton, LinkedInButton} from "./about";
+import {GithubButton, ItchButton, LinkedInButton} from "./about";
 import colorclashimg from "../images/color-clash.png";
 
 function Home() {
@@ -27,16 +27,11 @@ function Home() {
                 window.location.href = '/projects'
             }}>More Projects -></Button>
             <h3>Find me on:</h3>
-            <Row xs={'4'}>
-                <Col/>
-                <Col>
-                    <GithubButton />
-                </Col>
-                <Col>
-                    <LinkedInButton />
-                </Col>
-                <Col/>
-            </Row>
+            <div className={"about-links"}>
+                <GithubButton />
+                <LinkedInButton />
+                <ItchButton />
+            </div>
         </div>
     )
 }
