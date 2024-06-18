@@ -18,26 +18,25 @@ import MiniProjects from "./pages/miniprojects";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
-        <Router>
-            <MyNavbar />
-            <Routes>
-                <Route exact path={'/'} element={<Home />}/>
-                <Route exact path={'/about'} element={<About /> }/>
-                <Route exact path={'/projects'} element={<Projects />}/>
-                <Route exact path={'/game-engine'} element={<Dragonfly />}/>
-                <Route exact path={'/pokemon-blitz'} element={<PokemonBlitz />}/>
-                <Route exact path={'/royal-siege'} element={<RoyalSiege />}/>
-                <Route exact path={'/the-great-escape'} element={<TheGreatEscape />}/>
-                <Route exact path={'/merge-monastery'} element={<MergeMonastery />} />
-                <Route exact path={'/color-clash'} element={<ColorClash />} />
-                <Route exact path={'/mini-projects'} element={<MiniProjects />} />
-                <Route exact path={'/royal-siege-gallery'} element={<Gallery />} />
-                <Route exact path={'/resume'} element={<Resume />}/>
-            </Routes>
-        </Router>
+        <div className={"content"}>
+            <Router>
+                <MyNavbar />
+                <Routes>
+                    <Route exact path={'/'} element={<Home />}/>
+                    <Route exact path={'/about'} element={<About /> }/>
+                    <Route exact path={'/projects'} element={<Projects />}/>
+                    <Route exact path={'/game-engine'} element={<Dragonfly />}/>
+                    <Route exact path={'/pokemon-blitz'} element={<PokemonBlitz />}/>
+                    <Route exact path={'/royal-siege'} element={<RoyalSiege />}/>
+                    <Route exact path={'/the-great-escape'} element={<TheGreatEscape />}/>
+                    <Route exact path={'/merge-monastery'} element={<MergeMonastery />} />
+                    <Route exact path={'/color-clash'} element={<ColorClash />} />
+                    <Route exact path={'/mini-projects'} element={<MiniProjects />} />
+                    <Route exact path={'/royal-siege-gallery'} element={<Gallery />} />
+                    <Route exact path={'/resume'} element={<Resume />}/>
+                </Routes>
+            </Router>
+        </div>
         <FooterBar />
     </div>
   );

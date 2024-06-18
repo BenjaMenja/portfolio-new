@@ -6,21 +6,35 @@ import pokemonblitzimg from "../images/pokemon-blitz.png";
 import mergemonasteryimg from "../images/merge-monastery-logo.png"
 import colorclashimg from "../images/color-clash.png"
 import {Button, Card} from "reactstrap";
+import {useEffect, useState} from "react";
 
 function Projects() {
+    const [width, setWidth] = useState(window.innerWidth)
+    useEffect(() => {
+        function handleResize() {
+            const newwidth = window.innerWidth
+            setWidth(newwidth)
+        }
+        window.addEventListener('resize', handleResize)
+    }, [])
     return (
         <div style={{color: '#FFFFFF',marginTop: "5rem"}}>
-            <table style={{width: '100%', tableLayout: 'fixed', marginBottom: '5rem'}}>
+            {(width > 768) ? <table style={{width: '100%', tableLayout: 'fixed', marginBottom: '5rem'}}>
                 <tr>
                     <td></td>
                     <td>
                         <h1>Projects</h1>
                     </td>
                     <td>
-                        <MiniProjectDisplay />
+                        <MiniProjectDisplay screenwidth={width}/>
                     </td>
                 </tr>
-            </table>
+            </table> :
+                <>
+                    <h1>Projects</h1>
+                    <MiniProjectDisplay screenwidth={width}/>
+                </>
+            }
             <Project title="Color Clash" imgsrc={colorclashimg}
                      desc="A first person shooter game that follows a 1v1 deathmatch format. Earn more eliminations than your opponent to win, and paint the floor to enhance your movement! Part of a larger research project titled &quot;Exploring Adaptive Time Delay in First Person Shooter Games&quot;."
                      project="color-clash"
@@ -49,34 +63,64 @@ function Projects() {
     )
 }
 
-function MiniProjectDisplay() {
+function MiniProjectDisplay(props) {
     let bgColor = 'rgba(136, 196, 236, 1)'
     return (
-        <Card className={'shadow-lg'} outline color={"light"} style={{
-            width: '75%',
-            alignItems: 'center',
-            backgroundColor: bgColor,
-            border: 'none'
-        }}>
-            <table style={{width: '100%', tableLayout: 'fixed'}}>
-                <tr>
-                    <td style={{textAlign: 'right'}}>
-                        <i className={"bi bi-gear-wide-connected"}></i>
-                    </td>
-                    <td>
-                        <h4 style={{marginTop: '1rem'}}>Mini Projects</h4>
-                    </td>
-                    <td>
-                        <Button color="primary" onClick={() => {
-                            window.location.href = '/mini-projects'
-                        }}>
-                            Learn More
-                        </Button>
-                    </td>
-                </tr>
-            </table>
-            <p>A collection of mini projects I've contributed to or developed myself</p>
-        </Card>
+        <>
+        {props.screenwidth > 768 ? <Card className={'shadow-lg'} outline color={"light"} style={{
+                width: '80%',
+                alignItems: 'center',
+                backgroundColor: bgColor,
+                border: 'none'
+            }}>
+                <table style={{width: '100%', tableLayout: 'fixed'}}>
+                    <tr>
+                        <td style={{textAlign: 'right'}}>
+                            <i className={"bi bi-gear-wide-connected"}></i>
+                        </td>
+                        <td>
+                            <h4 style={{marginTop: '1rem'}}>Mini Projects</h4>
+                        </td>
+                        <td>
+                            <Button color="primary" onClick={() => {
+                                window.location.href = '/mini-projects'
+                            }}>
+                                Learn More
+                            </Button>
+                        </td>
+                    </tr>
+                </table>
+                <p>A collection of mini projects I've contributed to or developed myself</p>
+            </Card> : <Card className={'shadow-lg'} outline color={"light"} style={{
+                width: '80%',
+                alignItems: 'center',
+                backgroundColor: bgColor,
+                marginLeft: '10vw',
+                marginTop: '5rem',
+                marginBottom: '5rem',
+                border: 'none'
+            }}>
+                <table style={{width: '100%', tableLayout: 'fixed'}}>
+                    <tr>
+                        <td style={{textAlign: 'right'}}>
+                            <i className={"bi bi-gear-wide-connected"}></i>
+                        </td>
+                        <td>
+                            <h4 style={{marginTop: '1rem'}}>Mini Projects</h4>
+                        </td>
+                        <td>
+                            <Button color="primary" onClick={() => {
+                                window.location.href = '/mini-projects'
+                            }}>
+                                Learn More
+                            </Button>
+                        </td>
+                    </tr>
+                </table>
+                <p>A collection of mini projects I've contributed to or developed myself</p>
+            </Card>
+        }
+        </>
     )
 }
 
