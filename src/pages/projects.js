@@ -48,7 +48,7 @@ function Projects() {
                      project="merge-monastery"
                      status={{teamsize: '10', isDone: 'Yes', role: "Programmer, Buildmaster", tools: "C# / Unity, Miro, Fastlane", dates: "September 2023 - January 2024"}}/>
             <Project title="Royal Siege" imgsrc={royalsiegelogo}
-                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 14 unique characters, four maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
+                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 15 unique characters, four maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
                      project="royal-siege"
                      status={{teamsize: '4-7', isDone: 'No', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
             <Project title="2D C++ Game Engine" imgsrc={saucerimg}

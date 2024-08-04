@@ -14,12 +14,12 @@ function RoyalSiege() {
                 textAlign: 'left'
             }}>
                 <p><i>Royal Siege </i>
-                is a team-based MOBA game built in <i>Minecraft</i> using the game's <a href="https://minecraft.fandom.com/wiki/Data_pack">data pack</a> and <a href="https://minecraft.fandom.com/wiki/Resource_pack">resource pack</a> system.
+                is a team-based MOBA game built in <i>Minecraft</i> using the game's <a href="https://minecraft.wiki/w/Data_pack">data pack</a> and <a href="https://minecraft.wiki/w/Resource_pack">resource pack</a> system.
                     The goal of the game is to slay the opposing team's king using your character's unique set of weapons, abilities, and shops.</p>
                 <h3>Royal Siege Includes:</h3>
                     <ul>
                         <li>
-                            14 unique characters, each with their own set of weapons, abilities, and shops
+                            15 unique characters, each with their own set of weapons, abilities, and shops
                         </li>
                         <li>
                             2 gamemodes
