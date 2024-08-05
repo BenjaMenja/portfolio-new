@@ -9,6 +9,7 @@ function Home() {
     return (
         <div style={{color: '#FFFFFF'}}>
             <p>Thank you for checking out my portfolio!</p>
+            <p>I'm Ben Gelinas, an aspiring software developer with a background in web and game development.</p>
             <p>Feel free to take a look at some of my featured projects below,</p>
             <p style={{marginBottom: '3rem'}}>or learn more about me by pressing the About button!</p>
             <Project title="Color Clash" imgsrc={colorclashimg}

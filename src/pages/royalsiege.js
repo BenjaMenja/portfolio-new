@@ -39,13 +39,20 @@ function RoyalSiege() {
                         <li>
                             A playtesting group to aid in balancing characters and map elements
                         </li>
-                    </ul><br/><br/>
-                    As the lead developer and programmer for this project, my main goals are to lead the design and direction of new content as well as discovering and implement new programming techniques to include content while optimizing for performance.
-                    I also host playtesting sessions to discover potential bugs in the game, receive suggestions from players, and to improve balancing within the characters and maps.<br/><br/>
+                    </ul><br/>
 
                     Note: As the game was built in Minecraft, a preexisting game, Royal Siege is subject to the limitations of Minecraft, but is also aided by the existing mechanics, objects, and engine that Minecraft runs on.<br/><br/>
 
                 <p>If you would like to see more of Royal Siege, please <a href="/royal-siege-gallery">click here</a> to view a photo gallery of Royal Siege screenshots.<br/><br/></p>
+                <h3>Contributions:</h3>
+                <ul>
+                    <li>Character design for all 15 characters</li>
+                    <li>Map design for 2 of the 4 maps</li>
+                    <li>Art integration into the game</li>
+                    <li>Programming for all gameplay features</li>
+                    <li>Playtest session organization</li>
+                    <li>Implementation of gameplay and balance suggestions as well as bug reports</li>
+                </ul>
             </Card>
         </div>
     )
