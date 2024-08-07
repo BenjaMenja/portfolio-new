@@ -3,12 +3,17 @@ import {useEffect, useState} from "react";
 
 function MyNavbar() {
     const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
     const [scroll, setScroll] = useState(window.scrollY)
     const [dropdownOpen, setDropdownOpen] = useState(false)
     useEffect(() => {
         function handleResize() {
             const newwidth = window.innerWidth
+            const newheight = window.innerHeight
             setWidth(newwidth)
+            setHeight(newheight)
+            console.log("Width: " + width)
+            console.log("Height: " + height)
         }
 
         function handleScroll() {
@@ -21,10 +26,14 @@ function MyNavbar() {
     }, [])
     return (
         <>
-            {(width > 768) ? <>
+            {(width > 768 && height > 600) ? <>
                     <LargeNavbar scroll={scroll}/>
                 </>
                  : <div className={'custom-navbar'}>
+                    <div className={'custom-navbar-name'}>
+                        <b>Ben Gelinas</b><br/>
+                        <div className={"custom-navbar-subtitle"}>Game Programmer & Computer Scientist</div>
+                    </div>
                 <Button style={{background: '#000000', border: '0px'}} onClick={() => setDropdownOpen(!dropdownOpen)}>
                     <i className={'bi bi-list'}></i>
                 </Button>
@@ -50,10 +59,8 @@ function LargeNavbar() {
         <>
             <div className={'custom-navbar'}>
                 <div className={'custom-navbar-name'}>
-                    <b>Ben Gelinas</b>
-                </div>
-                <div className={'custom-navbar-subtitle'}>
-                    Game Programmer & Computer Scientist
+                    <b>Ben Gelinas</b><br/>
+                    <div className={"custom-navbar-subtitle"}>Game Programmer & Computer Scientist</div>
                 </div>
                 <div className={'custom-navbar-nav'}>
                     <NavbarItem page={'/'}>

@@ -5,23 +5,27 @@ import {useEffect, useState} from "react";
 function MergeMonastery() {
     let bgColor = 'rgba(0,0,0,0)'
     const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
     useEffect(() => {
         function handleResize() {
-            setWidth(window.innerWidth)
+            const newwidth = window.innerWidth
+            const newheight = window.innerHeight
+            setWidth(newwidth)
+            setHeight(newheight)
         }
         window.addEventListener('resize', handleResize)
     }, [])
     return (
         <>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Merge Monastery</h1>
-            {(width > 768) ? <img src={image} alt="Uh oh" width={visualViewport.width * 0.3} height={visualViewport.height * 0.3} style={{marginBottom: '5rem'}}/> :
-                <img src={image} alt="Uh oh" width={visualViewport.width * 0.9} height={visualViewport.height * 0.4} style={{marginBottom: '5rem'}}/>}
+            {(width > 768) ? <img src={image} alt="Merge Monastery's Logo" width={'25%'} height={'auto'} style={{marginBottom: '5rem'}}/> :
+                <img src={image} alt="Merge Monastery's Logo" width={visualViewport.width * 0.75} height={'auto'} style={{marginBottom: '5rem'}}/>}
 
             <Card className={'border-0'} style={{
                 background: bgColor,
                 color: '#FFFFFF',
-                marginLeft: '15vw',
-                width: '70vw',
+                marginLeft: '10vw',
+                width: '80vw',
                 textAlign: 'left'
             }}>
                 <p><i>Merge Monastery </i>

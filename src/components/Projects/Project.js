@@ -5,11 +5,13 @@ import ProjectStatus from "./projectstatus";
 function Project(props) {
     let bgColor = 'rgba(136, 196, 236, 1)'
     const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
     useEffect(() => {
         function handleResize() {
             const newwidth = window.innerWidth
+            const newheight = window.innerHeight
             setWidth(newwidth)
-            console.log(newwidth)
+            setHeight(newheight)
         }
         window.addEventListener('resize', handleResize)
     }, [])
@@ -27,14 +29,14 @@ function Project(props) {
                 <Row xs={'2'}>
                     <Col>
                         <CardBody>
-                            <img src={props.imgsrc} alt="Uh oh" width='80%' height='auto'/>
+                            <img src={props.imgsrc} alt="Project Thumbnail" width='60%' height='auto'/>
                         </CardBody>
                     </Col>
                     <Col>
+                        <ProjectStatus width={width} height={height} publisher={props.status.publisher} isDone={props.status.isDone} role={props.status.role} tools={props.status.tools} dates={props.status.dates}/>
+                        <br></br>
+
                         <p style={{textAlign: 'left', fontSize: '1.5rem'}}>{props.desc}</p>
-                        <br></br>
-                        <br></br>
-                        <ProjectStatus width={width} teamsize={props.status.teamsize} isDone={props.status.isDone} role={props.status.role} tools={props.status.tools} dates={props.status.dates}/>
                         <Button color="primary" onClick={() => {
                             window.location.href = '/' + props.project
                         }} style={{marginBottom: '1rem'}}>
@@ -53,11 +55,11 @@ function Project(props) {
                     border: 'none'
                 }}>
                     <h2 style={{marginBottom: '1rem', marginTop: '1rem'}}>{props.title}</h2>
-                    <img src={props.imgsrc} alt="Uh oh" width='80%' height='auto'/>
+                    <img src={props.imgsrc} alt="Project Thumbnail" width='80%' height='auto'/>
+                    <ProjectStatus width={width} height={height} publisher={props.status.publisher} isDone={props.status.isDone} role={props.status.role} tools={props.status.tools} dates={props.status.dates}/>
+                    <br></br>
+                    <br></br>
                     <p style={{textAlign: 'center', fontSize: '1.5rem', paddingLeft: '5%', paddingRight: '5%'}}>{props.desc}</p>
-                    <br></br>
-                    <br></br>
-                    <ProjectStatus width={width} teamsize={props.status.teamsize} isDone={props.status.isDone} role={props.status.role} tools={props.status.tools} dates={props.status.dates}/>
                     <Button color="primary" onClick={() => {
                         window.location.href = '/' + props.project
                     }} style={{marginBottom: '1rem'}}>

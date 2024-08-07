@@ -45,10 +45,7 @@
 }
 
 .custom-navbar-subtitle {
-  background-color: var(--project-background-color);
   font-size: 1.5rem;
-  color: white;
-  font-family: Serif, serif;
 }
 
 .custom-navbar-nav {
@@ -135,11 +132,6 @@
   font-size: 0.9em;
 }
 
-.about-small-screen .about-flex-horizontal {
-  display: flex;
-  flex-direction: row;
-}
-
 .about-small-screen .about-flex-vertical {
   display: flex;
   flex-direction: column;
@@ -150,7 +142,6 @@
   margin-bottom: 3rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 10vw;
 }
 
 .about-small-screen .contact-info .find-me-on {

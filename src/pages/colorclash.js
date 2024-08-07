@@ -1,22 +1,33 @@
 import image from '../images/color-clash.png'
 import conditions from '../images/adaptive-time-delay-conditions.png'
-import Obfuscate from 'react-obfuscate'
 import {Card} from "reactstrap";
+import {useEffect, useState} from "react";
 function ColorClash() {
     let bgColor = 'rgba(0,0,0,0)'
+    const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
+    useEffect(() => {
+        function handleResize() {
+            const newwidth = window.innerWidth
+            const newheight = window.innerHeight
+            setWidth(newwidth)
+            setHeight(newheight)
+        }
+        window.addEventListener('resize', handleResize)
+    }, [])
     return (
         <div>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Color Clash: Exploring Adaptive Time Delay in First Person Shooter Games</h1>
-            <img src={image} alt="Uh oh" width={visualViewport.width * 0.5} height={visualViewport.height * 0.6} style={{marginBottom: '5rem'}}/>
+            {(width > 768 && height > 600) ? <img src={image} alt="A screenshot of the blue player aiming at the red player." width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="A screenshot of the blue player aiming at the red player." width={'90%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
             <Card className={'border-0'} style={{
                 background: bgColor,
                 color: "#FFFFFF",
-                marginLeft: '15vw',
-                width: '70vw',
+                marginLeft: '10vw',
+                width: '80vw',
                 textAlign: 'left'
             }}>
                 <h3>Publication</h3>
-                <p>Publication is available by emailing me at <Obfuscate email={"benjamenjalinas@gmail.com"} />.</p><br/>
+                <p>Publication is available <a href={'https://digital.wpi.edu/concern/student_works/4f16c723m'}>here</a> on the WPI library.</p><br/>
                 <h3>What is it?</h3>
                 Exploring Adaptive Time Delay in First Person Shooter Games is a research project conducted to fulfill the Major Qualifying Project degree requirement at Worcester Polytechnic Institute. We designed, implemented, and tested Adaptive Time Delay,
                 a latency compensation technique that aims to maintain fairness and improve Quality of Experience for players experiencing different amounts of network latency.<br/><br/>
@@ -25,12 +36,13 @@ function ColorClash() {
                     which aims to maintain the improved fairness introduced by regular time delay while also improving QoE for all players. It achieves this by only turning on time delay in situations where it is needed. In this research, two
                     conditions were identified that represent player interaction, being line of sight and proximity.</p>
             </Card>
-            <img src={conditions} alt="Uh oh" width={visualViewport.width * 0.25} height={visualViewport.height * 0.35}/>
+            {(width > 768 && height > 600) ? <img src={conditions} alt="Graphic of the conditions required to activate adaptive time delay." width={'33%'} height={'auto'}/> : <img src={conditions} alt="Graphic of the conditions required to activate adaptive time delay." width={'75%'} height={'auto'}/>}
+            <br/><br/>
             <Card className={'border-0'} style={{
                 background: bgColor,
                 color: "#FFFFFF",
-                marginLeft: '15vw',
-                width: '70vw',
+                marginLeft: '10vw',
+                width: '80vw',
                 textAlign: 'left'
             }}>
                 <h3>Color Clash</h3>

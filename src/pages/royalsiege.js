@@ -1,16 +1,28 @@
 import image from "../images/royal-siege-gallery/tdm.png"
 import {Card} from "reactstrap";
+import {useEffect, useState} from "react";
 function RoyalSiege() {
     let bgColor = 'rgba(0,0,0,0)'
+    const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
+    useEffect(() => {
+        function handleResize() {
+            const newwidth = window.innerWidth
+            const newheight = window.innerHeight
+            setWidth(newwidth)
+            setHeight(newheight)
+        }
+        window.addEventListener('resize', handleResize)
+    }, [])
     return (
         <div>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Royal Siege</h1>
-            <img src={image} alt="Uh oh" width={visualViewport.width * 0.33} height={visualViewport.height * 0.4} style={{marginBottom: '5rem'}}/>
+            {(width > 768 && height > 600) ? <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={'75%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
             <Card className={'border-0'} style={{
                 background: bgColor,
                 color: "#FFFFFF",
-                marginLeft: '15vw',
-                width: '70vw',
+                marginLeft: '10vw',
+                width: '80vw',
                 textAlign: 'left'
             }}>
                 <p><i>Royal Siege </i>

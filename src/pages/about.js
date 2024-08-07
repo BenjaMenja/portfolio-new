@@ -6,16 +6,19 @@ import Obfuscate from "react-obfuscate";
 
 function About() {
     const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
     useEffect(() => {
         function handleResize() {
             const newwidth = window.innerWidth
+            const newheight = window.innerHeight
             setWidth(newwidth)
+            setHeight(newheight)
         }
         window.addEventListener('resize', handleResize)
     }, [])
     return (
         <div style={{color: '#FFFFFF',marginTop: "5rem"}}>
-            {(width > 768) ? <AboutLargeScreen /> : <AboutSmallScreen />}
+            {(width > 768 && height > 600) ? <AboutLargeScreen /> : <AboutSmallScreen />}
 
             <Languages margin={'7rem'} width={width}/>
             <DevTools width={width}/>
@@ -57,7 +60,7 @@ function AboutLargeScreen() {
     return (<Row xs={'2'} style={{marginBottom: '3rem'}}>
         <Col style={{paddingLeft: '10%', textAlign: 'left'}}>
             <p>
-                Hello! I'm Ben Gelinas, an aspiring software developer with a background in web and game development. I like to work on projects that include games, tools for games, and websites such as this one!<br></br><br></br>
+                Hello! I'm Ben Gelinas, a software developer with a background in web and game development. I like to work on projects that include games, tools for games, and websites such as this one!<br></br><br></br>
                 I have experience with languages such as C/C++, C#, Java, JavaScript, and Blueprints. A full list of languages and development tools I use can be found below.<br></br><br></br>
                 Outside of project work, I also enjoy:
                 <List>
@@ -85,7 +88,7 @@ function AboutSmallScreen() {
     return (
         <div className={"about-small-screen"}>
             <p>
-                Hello! I'm Ben Gelinas, an aspiring software developer with a background in web and game development. I like to work on projects that include games, tools for games, and websites such as this one!<br></br><br></br>
+                Hello! I'm Ben Gelinas, a software developer with a background in web and game development. I like to work on projects that include games, tools for games, and websites such as this one!<br></br><br></br>
                 I have experience with languages such as C/C++, C#, Java, JavaScript, and Blueprints. A full list of languages and development tools I use can be found below.<br></br><br></br>
                 Outside of project work, I also enjoy:
                 <ul>
@@ -95,7 +98,7 @@ function AboutSmallScreen() {
                 </ul>
                 If you would like to reach out, feel free to contact me via email or other socials!
             </p>
-            <div className={"about-flex-horizontal contact-info"}>
+            <div className={"contact-info"}>
                 <div className={"about-flex-vertical"}>
                     <h3><b>Contact me</b></h3>
                     <Obfuscate style={{marginBottom: '4rem', display: 'inline-block'}} email={"benjamenjalinas@gmail.com"} />

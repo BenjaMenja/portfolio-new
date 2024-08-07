@@ -8,9 +8,13 @@ import {useEffect, useState} from "react";
 
 function Gallery() {
     const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
     useEffect(() => {
         function handleResize() {
-            setWidth(window.innerWidth)
+            const newwidth = window.innerWidth
+            const newheight = window.innerHeight
+            setWidth(newwidth)
+            setHeight(newheight)
         }
         window.addEventListener('resize', handleResize)
     }, [])
@@ -22,13 +26,13 @@ function Gallery() {
             }}>
                 Back to Royal Siege Page
             </Button>
-            {(width > 1024) ? <>
+            {(width > 768) ? <>
                 <Row style={{marginBottom: '2rem'}}>
                     <Col>
                         <ImageFormat source={lobby} caption={'The lounge area of the lobby'}/>
                     </Col>
                     <Col>
-                        <ImageFormat source={tdm} caption={'The Coliseum map'} />
+                        <ImageFormat source={tdm} caption={'The Colosseum map'} />
                     </Col>
                 </Row>
                 <Row>
@@ -42,7 +46,7 @@ function Gallery() {
             </> :
             <>
                 <ImageFormat source={lobby} caption={'The lounge area of the lobby'} smallwindow={true}/>
-                <ImageFormat source={tdm} caption={'The Coliseum map'} smallwindow={true}/>
+                <ImageFormat source={tdm} caption={'The Colosseum map'} smallwindow={true}/>
                 <ImageFormat source={forestglen} caption={'The Forest Glen map'} smallwindow={true}/>
                 <ImageFormat source={winterland} caption={'The Winterland map'} smallwindow={true}/>
             </>}
