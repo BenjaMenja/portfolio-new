@@ -1,5 +1,6 @@
 import {Button, Dropdown} from "reactstrap";
 import {useEffect, useState} from "react";
+import PDF from "../../pdf/resume.pdf"
 
 function MyNavbar() {
     const [width, setWidth] = useState(window.innerWidth)
@@ -12,8 +13,6 @@ function MyNavbar() {
             const newheight = window.innerHeight
             setWidth(newwidth)
             setHeight(newheight)
-            console.log("Width: " + width)
-            console.log("Height: " + height)
         }
 
         function handleScroll() {
@@ -47,6 +46,9 @@ function MyNavbar() {
                     <NavbarDropdownItem page={'/projects'}>
                         Projects
                     </NavbarDropdownItem>
+                    <NavbarDropdownItem>
+                        <a style={{color: "white", textDecoration: "none"}} href={PDF} target={"_blank"}>Resume</a>
+                    </NavbarDropdownItem>
                 </Dropdown>}
             </div>}
 
@@ -72,6 +74,9 @@ function LargeNavbar() {
                     <NavbarItem page={'/projects'}>
                         Projects
                     </NavbarItem>
+                    <NavbarItem>
+                        <a style={{color: "white", textDecoration: "none"}} href={PDF} target={"_blank"}>Resume</a>
+                    </NavbarItem>
                 </div>
             </div>
         </>
@@ -81,17 +86,25 @@ function LargeNavbar() {
 
 function NavbarDropdownItem(props) {
     return (
-        <div className={'navbar-dropdown-item'} onClick={() => window.location.href = props.page}>
-            {props.children}
-        </div>
+        <>
+            {(props.page !== undefined) ? <div className={'navbar-dropdown-item'} onClick={() => window.location.href = props.page}>
+                {props.children}
+            </div> : <div className={'navbar-dropdown-item'}>
+                {props.children}
+            </div>}
+        </>
     )
 }
 
 function NavbarItem(props) {
     return (
-        <div className={'navbar-item'} onClick={() => window.location.href = props.page}>
-            {props.children}
-        </div>
+        <>
+            {(props.page !== undefined) ? <div className={'navbar-item'} onClick={() => window.location.href = props.page}>
+                {props.children}
+            </div> : <div className={'navbar-item'}>
+                {props.children}
+            </div>}
+        </>
     )
 }
 

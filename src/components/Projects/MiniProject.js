@@ -8,7 +8,6 @@ function MiniProject(props) {
         function handleResize() {
             const newwidth = window.innerWidth
             setWidth(newwidth)
-            console.log(newwidth)
         }
         window.addEventListener('resize', handleResize)
     }, [])
