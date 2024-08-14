@@ -1,6 +1,6 @@
 import {Button, Dropdown} from "reactstrap";
 import {useEffect, useState} from "react";
-import PDF from "../../pdf/resume.pdf"
+import PDF from "../../pdf/Ben-Gelinas-Resume.pdf"
 
 function MyNavbar() {
     const [width, setWidth] = useState(window.innerWidth)
@@ -47,7 +47,7 @@ function MyNavbar() {
                         Projects
                     </NavbarDropdownItem>
                     <NavbarDropdownItem>
-                        <a style={{color: "white", textDecoration: "none"}} href={PDF} target={"_blank"}>Resume</a>
+                        <a style={{color: "white", textDecoration: "none"}} href={PDF} target={"_blank"} rel={"noreferrer noopener"}>Resume</a>
                     </NavbarDropdownItem>
                 </Dropdown>}
             </div>}
@@ -75,7 +75,7 @@ function LargeNavbar() {
                         Projects
                     </NavbarItem>
                     <NavbarItem>
-                        <a style={{color: "white", textDecoration: "none"}} href={PDF} target={"_blank"}>Resume</a>
+                        <a style={{color: "white", textDecoration: "none"}} href={PDF} target={"_blank"} rel={"noreferrer noopener"}>Resume</a>
                     </NavbarItem>
                 </div>
             </div>
