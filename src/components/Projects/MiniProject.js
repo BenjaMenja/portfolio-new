@@ -25,10 +25,10 @@ function MiniProject(props) {
                 <table style={{width: '100%', tableLayout: 'fixed'}}>
                     <tr>
                         <td>
-                            <img src={props.imgsrc} width={'60%'} height={'auto'} alt={"Missing"}/>
+                            <img src={props.imgsrc} width={'75%'} height={'auto'} alt={"Missing"}/>
                         </td>
                         <td>
-                            <p style={{textAlign: 'left'}}>{props.desc}</p>
+                            <p style={{textAlign: 'left', paddingLeft: '1rem', paddingRight: '1rem'}}>{props.desc}</p>
                             {(props.download) && <Button color={'primary'} onClick={() => {
                                 window.location.href = props.download
                             }} style={{width: '33%'}}>
@@ -52,11 +52,13 @@ function MiniProject(props) {
                         <td>
                             <img src={props.imgsrc} width={'60%'} height={'auto'} alt={"Missing"}/>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
-                            <p style={{textAlign: 'left'}}>{props.desc}</p>
+                            <p style={{textAlign: 'left', paddingLeft: '1rem', paddingRight: '1rem'}}>{props.desc}</p>
                             {(props.download) && <Button color={'primary'} onClick={() => {
                                 window.location.href = props.download
-                            }} style={{width: '50%'}}>
+                            }} style={{width: '50%', marginBottom: '1rem'}}>
                                 {props.downloadtext ? props.downloadtext : "Download"}
                             </Button>}
                         </td>
