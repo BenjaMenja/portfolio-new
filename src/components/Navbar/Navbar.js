@@ -31,7 +31,7 @@ function MyNavbar() {
                  : <div className={'custom-navbar'}>
                     <div className={'custom-navbar-name'}>
                         <b>Ben Gelinas</b><br/>
-                        <div className={"custom-navbar-subtitle"}>Game Programmer & Computer Scientist</div>
+                        <div className={"custom-navbar-subtitle"}>Software Developer & Game Programmer</div>
                     </div>
                 <Button style={{background: '#000000', border: '0px'}} onClick={() => setDropdownOpen(!dropdownOpen)}>
                     <i className={'bi bi-list'}></i>
