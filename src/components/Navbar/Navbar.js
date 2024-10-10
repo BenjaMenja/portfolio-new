@@ -62,7 +62,7 @@ function LargeNavbar() {
             <div className={'custom-navbar'}>
                 <div className={'custom-navbar-name'}>
                     <b>Ben Gelinas</b><br/>
-                    <div className={"custom-navbar-subtitle"}>Game Programmer & Computer Scientist</div>
+                    <div className={"custom-navbar-subtitle"}>Software Developer & Game Programmer</div>
                 </div>
                 <div className={'custom-navbar-nav'}>
                     <NavbarItem page={'/'}>
