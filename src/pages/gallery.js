@@ -3,6 +3,8 @@ import lobby from '../images/royal-siege-gallery/lobby.png'
 import tdm from '../images/royal-siege-gallery/tdm.png'
 import forestglen from '../images/royal-siege-gallery/forestglen.png'
 import winterland from '../images/royal-siege-gallery/winterland.png'
+import pirates from '../images/royal-siege-gallery/colliding_tides.png'
+import ncs from '../images/royal-siege-gallery/new_chicago_skyline.png'
 import {Button, Col, Row} from "reactstrap";
 import {useEffect, useState} from "react";
 
@@ -43,12 +45,22 @@ function Gallery() {
                         <ImageFormat source={winterland} caption={'The Winterland map'} />
                     </Col>
                 </Row>
+                <Row>
+                    <Col>
+                        <ImageFormat source={pirates} caption={'The Colliding Tides map'}/>
+                    </Col>
+                    <Col>
+                        <ImageFormat source={ncs} caption={'The New Chicago Skyline map'} />
+                    </Col>
+                </Row>
             </> :
             <>
                 <ImageFormat source={lobby} caption={'The lounge area of the lobby'} smallwindow={true}/>
                 <ImageFormat source={tdm} caption={'The Colosseum map'} smallwindow={true}/>
                 <ImageFormat source={forestglen} caption={'The Forest Glen map'} smallwindow={true}/>
                 <ImageFormat source={winterland} caption={'The Winterland map'} smallwindow={true}/>
+                <ImageFormat source={pirates} caption={'The Colliding Tides map'} smallwindow={true}/>
+                <ImageFormat source={ncs} caption={'The New Chicago Skyline map'} smallwindow={true}/>
             </>}
 
         </>

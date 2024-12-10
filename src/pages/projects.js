@@ -51,7 +51,7 @@ function Projects() {
                      project="the-great-escape"
                      status={{isDone: 'Yes', role: "Programmer, Website Designer, Puzzle Designer", tools: "Blueprints / Unreal Engine", dates: 'March 2023 - May 2023'}}/>
             <Project title="Royal Siege" imgsrc={royalsiegelogo}
-                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 15 unique characters, four maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
+                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 16 unique characters, five maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
                      project="royal-siege"
                      status={{isDone: 'No', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
             <Project title="2D C++ Game Engine" imgsrc={saucerimg}

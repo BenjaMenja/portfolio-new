@@ -31,13 +31,13 @@ function RoyalSiege() {
                 <h3>Royal Siege Includes:</h3>
                     <ul>
                         <li>
-                            15 unique characters, each with their own set of weapons, abilities, and shops
+                            16 unique characters, each with their own set of weapons, abilities, and shops
                         </li>
                         <li>
-                            2 gamemodes
+                            2 gamemodes: Classic and Team Deathmatch
                         </li>
                         <li>
-                            4 maps, two for each gamemode
+                            5 maps
                         </li>
                         <li>
                             Money system for purchasing items unique to your character
@@ -58,8 +58,8 @@ function RoyalSiege() {
                 <p>If you would like to see more of Royal Siege, please <a href="/royal-siege-gallery">click here</a> to view a photo gallery of Royal Siege screenshots.<br/><br/></p>
                 <h3>Contributions:</h3>
                 <ul>
-                    <li>Character design for all 15 characters</li>
-                    <li>Map design for 2 of the 4 maps</li>
+                    <li>Character design for all 16 characters</li>
+                    <li>Map design for 2 of the 5 maps</li>
                     <li>Art integration into the game</li>
                     <li>Programming for all gameplay features</li>
                     <li>Playtest session organization</li>

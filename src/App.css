@@ -4,7 +4,6 @@
   text-align: center;
   background-color: #294F70;
   min-height: 100vh;
-  min-width: 100vw;
   font-size: 1.25rem;
 }
 
@@ -34,7 +33,7 @@
 
 .custom-navbar {
   margin-bottom: 3rem;
-  min-width: 100vw;
+
 }
 
 .custom-navbar-name {
