@@ -5,6 +5,7 @@ import royalsiegelogo from "../images/royal-siege-logo.png";
 import pokemonblitzimg from "../images/pokemon-blitz.png";
 import mergemonasteryimg from "../images/merge-monastery-logo.png"
 import colorclashimg from "../images/color-clash.png"
+import blockleimg from "../images/blockle.png"
 import {Button, Card} from "reactstrap";
 import {useEffect, useState} from "react";
 
@@ -58,6 +59,10 @@ function Projects() {
                      desc="A 2D game engine capable of providing a code framework necessary to build ASCII text-based video games. Based off of Mark Claypool's game engine, Dragonfly."
                      project="game-engine"
                      status={{isDone: 'Yes', role: "Programmer", tools: "C++ / Visual Studio", dates: 'January 2023 - March 2023'}}/>
+            <Project title="Blockle" imgsrc={blockleimg}
+                     desc="A Wordle inspired guessing game where you have to guess the Minecraft block based on its properties."
+                     project="blockle"
+                     status={{isDone: 'Yes', role: "Programmer", tools: "Typescript, React / Playwright", dates: 'November 2024 - December 2024'}}/>
             <Project title="Pokemon Blitz" imgsrc={pokemonblitzimg}
                      desc="A bullet hell game made in the Dragonfly game engine. Features 3 playable Pokemon that players can maneuver through a course while dodging an endless wave of Pokeballs trying to capture you."
                      project="pokemon-blitz"
