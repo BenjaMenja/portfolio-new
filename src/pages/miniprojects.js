@@ -2,6 +2,7 @@ import MiniProject from "../components/Projects/MiniProject";
 import StatsViewer from "../images/mc_stats_viewer.png"
 import MarioAI from "../images/mario_ai.png"
 import GreatEscapeWebsite from "../images/great_escape_website.png"
+import OneHundredPercent from "../images/one_hundred_percent.png"
 import {useEffect, useState} from "react";
 
 function MiniProjects() {
@@ -44,7 +45,9 @@ function MiniProjects() {
                                      download={"https://benjamenja.github.io/the-great-escape-website/"} downloadtext={"View"}/>
                     </td>
                     <td>
-
+                        <MiniProject title={"One Hundred Percent Datapack"} imgsrc={OneHundredPercent}
+                                     desc={<p>A datapack for <i>Minecraft</i> version 1.21.4 that automatically tracks your progress towards obtaining every item available in survival mode. Built using the datapack system with automation done with Java and the Fabric Modding API as well as Python.</p>}
+                                     download={"https://github.com/BenjaMenja/one-hundred-percent-datapack/"}/>
                     </td>
                 </tr>
             </table> :
@@ -58,6 +61,9 @@ function MiniProjects() {
                     <MiniProject title={"The Great Escape Website"} imgsrc={GreatEscapeWebsite}
                                  desc={<p>A small website created to host information about a game I worked on, <a href={"../the-great-escape"}>The Great Escape</a>. Contains a download page as well as information about the team.</p> }
                                  download={"https://benjamenja.github.io/the-great-escape-website/"} downloadtext={"View"}/>
+                    <MiniProject title={"One Hundred Percent Datapack"} imgsrc={OneHundredPercent}
+                                 desc={<p>A datapack for <i>Minecraft</i> version 1.21.4 that automatically tracks your progress towards obtaining every item available in survival mode. Built using the datapack system with automation done with Java and the Fabric Modding API as well as Python.</p>}
+                                 download={"https://github.com/BenjaMenja/one-hundred-percent-datapack/"}/>
                 </>
             }
         </div>
