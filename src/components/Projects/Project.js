@@ -17,7 +17,7 @@ function Project(props) {
     }, [])
     return (
         <div>
-            {(width > 768) ? <Card className={'shadow-lg'} outline color="light" style={{
+            {(width > 768) ? <Card className={'shadow-lg project'} outline color="light" style={{
                 width: '80vw',
                 textAlign: 'center',
                 backgroundColor: bgColor,
@@ -45,7 +45,7 @@ function Project(props) {
                     </Col>
                 </Row>
             </Card> : <>
-                <Card className={'shadow-lg'} outline color="light" style={{
+                <Card className={'shadow-lg project'} outline color="light" style={{
                     width: '80vw',
                     textAlign: 'center',
                     alignItems: "center",

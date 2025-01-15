@@ -1,3 +1,21 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-project {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.025;
+  }
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -102,6 +120,16 @@
 .navbar-dropdown-item:hover {
   cursor: pointer;
   background-color: #2a2a2a;
+}
+
+.project {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.025);
 }
 
 .about-links {

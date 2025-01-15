@@ -13,7 +13,7 @@ function MiniProject(props) {
     }, [])
     return (
         <>
-            {(width > 768) ? <Card className={'shadow-lg'} outline color="light" style={{
+            {(width > 768) ? <Card className={'shadow-lg project'} outline color="light" style={{
                 width: '80%',
                 height: '100%',
                 marginLeft: '10%',
@@ -37,7 +37,7 @@ function MiniProject(props) {
                         </td>
                     </tr>
                 </table>
-            </Card> : <Card className={'shadow-lg'} outline color="light" style={{
+            </Card> : <Card className={'shadow-lg project'} outline color="light" style={{
                 width: '80%',
                 height: '100%',
                 marginLeft: '10%',
