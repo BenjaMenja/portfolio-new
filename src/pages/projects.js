@@ -6,6 +6,7 @@ import pokemonblitzimg from "../images/pokemon-blitz.png";
 import mergemonasteryimg from "../images/merge-monastery-logo.png"
 import colorclashimg from "../images/color-clash.png"
 import blockleimg from "../images/blockle.png"
+import tfclogo from '../images/tfc_logo.png'
 import {Button, Card} from "reactstrap";
 import {useEffect, useState} from "react";
 
@@ -51,14 +52,18 @@ function Projects() {
                      desc="A third person stealth mission game where you play as a rebellious teenager who is determined to sneak out of the house to attend a party."
                      project="the-great-escape"
                      status={{isDone: 'Yes', role: "Programmer, Website Designer, Puzzle Designer", tools: "Blueprints / Unreal Engine", dates: 'March 2023 - May 2023'}}/>
-            <Project title="Royal Siege" imgsrc={royalsiegelogo}
-                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 16 unique characters, five maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
-                     project="royal-siege"
-                     status={{isDone: 'No', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
             <Project title="2D C++ Game Engine" imgsrc={saucerimg}
                      desc="A 2D game engine capable of providing a code framework necessary to build ASCII text-based video games. Based off of Mark Claypool's game engine, Dragonfly."
                      project="game-engine"
                      status={{isDone: 'Yes', role: "Programmer", tools: "C++ / Visual Studio", dates: 'January 2023 - March 2023'}}/>
+            <Project title="Royal Siege" imgsrc={royalsiegelogo}
+                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 16 unique characters, five maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
+                     project="royal-siege"
+                     status={{isDone: 'No', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
+            <Project title="TerraFirmaCraft: The Twilight Invasion" imgsrc={tfclogo}
+                     desc="A survival, technology, and combat focused modpack for Minecraft Forge 1.7.10. Features a collection of mods wrapped together with custom scripts, configurations, and addons to create a challenging but rewarding survival experience."
+                     project="tfc-ti"
+                     status={{isDone: 'Yes', role: "Developer, Programmer", tools: "Java, ZenScript, JSON / Minecraft, Gradle", dates: 'February 2025 - March 2025'}}/>
             <Project title="Blockle" imgsrc={blockleimg}
                      desc="A Wordle inspired guessing game where you have to guess the Minecraft block based on its properties."
                      project="blockle"

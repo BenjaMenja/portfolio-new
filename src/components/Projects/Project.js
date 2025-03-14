@@ -29,7 +29,7 @@ function Project(props) {
                 <Row xs={'2'}>
                     <Col>
                         <CardBody>
-                            <img src={props.imgsrc} alt="Project Thumbnail" width='60%' height='auto'/>
+                            <img src={props.imgsrc} alt="Project Thumbnail" width='75%' height='auto'/>
                         </CardBody>
                     </Col>
                     <Col>

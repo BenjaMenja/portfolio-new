@@ -14,6 +14,7 @@ import Gallery from "./pages/gallery";
 import ColorClash from "./pages/colorclash";
 import MiniProjects from "./pages/miniprojects";
 import Blockle from "./pages/blockle";
+import TFC_TI from './pages/tfc_ti';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                       <Route exact path={'/mini-projects'} element={<MiniProjects />} />
                       <Route exact path={'/royal-siege-gallery'} element={<Gallery />} />
                       <Route exact path={'/blockle'} element={<Blockle />} />
+                      <Route exact path={'/tfc-ti'} element={<TFC_TI />} />
                   </Routes>
               </Router>
           </div>
