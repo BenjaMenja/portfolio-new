@@ -78,6 +78,7 @@
 .navbar-item {
   background-color: #000000;
   border-radius: 8px;
+  padding: 2px;
   transition: background-color 500ms ease;
 }
 

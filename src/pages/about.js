@@ -57,11 +57,11 @@ export function ItchButton() {
 }
 
 function AboutLargeScreen() {
-    return (<Row xs={'2'} style={{marginBottom: '3rem'}}>
+    return (<Row xs={'2'} style={{marginBottom: '3rem', width: '100%'}}>
         <Col style={{paddingLeft: '10%', textAlign: 'left'}}>
             <p>
-                Hello! I'm Ben Gelinas, a software developer with a background in web and game development. I like to work on projects that include games, tools for games, and websites such as this one!<br></br><br></br>
-                I have experience with languages such as C/C++, C#, Java, JavaScript, and Blueprints. A full list of languages and development tools I use can be found below.<br></br><br></br>
+                Hello! I'm Ben Gelinas, a software developer with experience in web and game development. I like to work on web applications, games, and other forms of software. I am always eager to take on challenges and learn new technologies to stay on top of the rapidly changing software industry.<br></br><br></br>
+                I have experience with languages such as C/C++, C#, Java, JavaScript, and Python. A full list of languages and development tools I use can be found below.<br></br><br></br>
                 Outside of project work, I also enjoy:
                 <List>
                     <li>Performing Music</li>
@@ -88,8 +88,8 @@ function AboutSmallScreen() {
     return (
         <div className={"about-small-screen"}>
             <p>
-                Hello! I'm Ben Gelinas, a software developer with a background in web and game development. I like to work on projects that include games, tools for games, and websites such as this one!<br></br><br></br>
-                I have experience with languages such as C/C++, C#, Java, JavaScript, and Blueprints. A full list of languages and development tools I use can be found below.<br></br><br></br>
+            Hello! I'm Ben Gelinas, a software developer with experience in web and game development. I like to work on web applications, games, and other forms of software. I am always eager to take on challenges and learn new technologies to stay on top of the rapidly changing software industry.<br></br><br></br>
+            I have experience with languages such as C/C++, C#, Java, JavaScript, and Python. A full list of languages and development tools I use can be found below.<br></br><br></br>
                 Outside of project work, I also enjoy:
                 <ul>
                     <li>Performing Music</li>
@@ -108,6 +108,7 @@ function AboutSmallScreen() {
                     <div className={"about-links about-flex-horizontal"}>
                         <GithubButton />
                         <LinkedInButton />
+                        <ItchButton />
                     </div>
                 </div>
             </div>
