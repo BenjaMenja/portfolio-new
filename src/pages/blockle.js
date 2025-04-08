@@ -43,7 +43,7 @@ function Blockle() {
                 Examples:
                 <ul>
                     <li>
-                        <b>hardness>2</b> would only show blocks that have a hardness value strictly greater than 2.
+                        <b>hardness&gt;2</b> would only show blocks that have a hardness value strictly greater than 2.
                     </li>
                     <li>
                         <b>color=red</b> would only show blocks that have a primary color of red.
@@ -53,7 +53,7 @@ function Blockle() {
                 Examples:
                 <ul>
                     <li>
-                        <b>hardness>2 color=red</b> would only show blocks that have a hardness value greater than 2 AND are the color red.
+                        <b>hardness&gt;2 color=red</b> would only show blocks that have a hardness value greater than 2 AND are the color red.
                     </li>
                     <li>
                         <b>blast_resistance=1 version!1.8 head</b> would only show blocks that have a blast resistance value of 1 AND were NOT introduced in version 1.8 AND have the substring "head" in their name.

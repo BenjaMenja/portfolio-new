@@ -7,6 +7,7 @@ import mergemonasteryimg from "../images/merge-monastery-logo.png"
 import colorclashimg from "../images/color-clash.png"
 import blockleimg from "../images/blockle.png"
 import tfclogo from '../images/tfc_logo.png'
+import pokequiztitle from '../images/pokequiz-title.png'
 import {Button, Card} from "reactstrap";
 import {useEffect, useState} from "react";
 
@@ -56,10 +57,14 @@ function Projects() {
                      desc="A 2D game engine capable of providing a code framework necessary to build ASCII text-based video games. Based off of Mark Claypool's game engine, Dragonfly."
                      project="game-engine"
                      status={{isDone: 'Yes', role: "Programmer", tools: "C++ / Visual Studio", dates: 'January 2023 - March 2023'}}/>
+            <Project title="PokeQuiz" imgsrc={pokequiztitle}
+                     desc="A quiz application centered around the Pokemon video game series. Test your knowledge of all things Pokemon!"
+                     project="pokequiz"
+                     status={{isDone: 'Yes', role: "Programmer, Designer", tools: "HTML, CSS, TypeScript / Angular, Tailwind, Chart.js", dates: 'March 2025 - April 2025'}}/>
             <Project title="Royal Siege" imgsrc={royalsiegelogo}
                      desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 16 unique characters, five maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
                      project="royal-siege"
-                     status={{isDone: 'No', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
+                     status={{isDone: 'Yes', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
             <Project title="TerraFirmaCraft: The Twilight Invasion" imgsrc={tfclogo}
                      desc="A survival, technology, and combat focused modpack for Minecraft Forge 1.7.10. Features a collection of mods wrapped together with custom scripts, configurations, and addons to create a challenging but rewarding survival experience."
                      project="tfc-ti"
