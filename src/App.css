@@ -20,19 +20,19 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #294F70;
+  background-color: #294f70;
   min-height: 100vh;
   font-size: 1.25rem;
 }
 
 .content {
-  flex: 1
+  flex: 1;
 }
 
 #root {
   --background-color: #000000;
-  --text-color: #FFFFFF;
-  --link-color: #95C0FE;
+  --text-color: #ffffff;
+  --link-color: #95c0fe;
   --project-background-color: rgba(136, 196, 236, 1);
 }
 
@@ -51,7 +51,6 @@
 
 .custom-navbar {
   margin-bottom: 3rem;
-
 }
 
 .custom-navbar-name {
@@ -82,8 +81,12 @@
   transition: background-color 500ms ease;
 }
 
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+}
+
 .navbar-item:hover {
-  cursor: pointer;
   background-color: #2a2a2a;
 }
 
@@ -116,6 +119,11 @@
   background-color: #000000;
   border-radius: 8px;
   transition: background-color 500ms ease;
+}
+
+.navbar-dropdown-item a {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar-dropdown-item:hover {
@@ -190,13 +198,13 @@
 }
 
 .languages-and-tools .lang-tool {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   margin-left: 1vmin;
   margin-right: 1vmin;
   max-width: 12.5vw;
   justify-content: center;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   font-size: calc(0.5rem + 0.5vw);
 }
 
@@ -214,6 +222,3 @@
 .mini-projects a {
   color: #0000ee;
 }
-
-
-

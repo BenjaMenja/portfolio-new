@@ -9,13 +9,10 @@ import {useEffect, useState} from "react";
 
 function MiniProjects() {
     const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
     useEffect(() => {
         function handleResize() {
             const newwidth = window.innerWidth
-            const newheight = window.innerHeight
             setWidth(newwidth)
-            setHeight(newheight)
         }
         window.addEventListener('resize', handleResize)
     }, [])

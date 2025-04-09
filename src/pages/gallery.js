@@ -23,9 +23,7 @@ function Gallery() {
     return (
         <>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Royal Siege Photo Gallery</h1>
-            <Button color='primary' style={{marginBottom: '3rem'}} onClick={() => {
-                window.location.href = '/royal-siege'
-            }}>
+            <Button color='primary' style={{marginBottom: '3rem', color: 'white'}} href={'/royal-siege'}>
                 Back to Royal Siege Page
             </Button>
             {(width > 768) ? <>

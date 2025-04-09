@@ -29,7 +29,7 @@ function Project(props) {
                 <Row xs={'2'}>
                     <Col>
                         <CardBody>
-                            <img src={props.imgsrc} alt="Project Thumbnail" width='75%' height='auto'/>
+                            <img src={props.imgsrc} alt="Project Thumbnail" width={props.imgwidth || '75%'} height='auto'/>
                         </CardBody>
                     </Col>
                     <Col>
@@ -37,9 +37,7 @@ function Project(props) {
                         <br></br>
 
                         <p style={{textAlign: 'left', fontSize: '1.5rem'}}>{props.desc}</p>
-                        <Button color="primary" onClick={() => {
-                            window.location.href = '/' + props.project
-                        }} style={{marginBottom: '1rem'}}>
+                        <Button color="primary" href={'/' + props.project} style={{marginBottom: '1rem', color: 'white'}}>
                             Learn More
                         </Button>
                     </Col>
@@ -60,9 +58,7 @@ function Project(props) {
                     <br></br>
                     <br></br>
                     <p style={{textAlign: 'center', fontSize: '1.5rem', paddingLeft: '5%', paddingRight: '5%'}}>{props.desc}</p>
-                    <Button color="primary" onClick={() => {
-                        window.location.href = '/' + props.project
-                    }} style={{marginBottom: '1rem'}}>
+                    <Button color="primary" href={'/' + props.project} style={{marginBottom: '1rem'}}>
                         Learn More
                     </Button>
                 </Card>

@@ -26,9 +26,7 @@ function Home() {
                      desc="A third person stealth mission game where you play as a rebellious teenager who is determined to sneak out of the house to attend a party."
                      project="the-great-escape"
                      status={{isDone: 'Yes', role: "Programmer, Website Designer, Puzzle Designer", tools: "Blueprints / Unreal Engine", dates: 'March 2023 - May 2023'}}/>
-            <Button style={{marginBottom: '2rem'}} color={'primary'} onClick={() => {
-                window.location.href = '/projects'
-            }}>More Projects -&gt;</Button>
+            <Button style={{marginBottom: '2rem', color: 'white'}} color={'primary'} href={'/projects'}>More Projects -&gt;</Button>
             <h3>Find me on:</h3>
             <div className={"about-links"}>
                 <GithubButton />

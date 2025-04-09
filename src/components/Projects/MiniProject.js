@@ -29,9 +29,7 @@ function MiniProject(props) {
                         </td>
                         <td>
                             <p style={{textAlign: 'left', paddingLeft: '1rem', paddingRight: '1rem'}}>{props.desc}</p>
-                            {(props.download) && <Button color={'primary'} onClick={() => {
-                                window.location.href = props.download
-                            }} style={{width: '33%'}}>
+                            {(props.download) && <Button color={'primary'} href={props.download} style={{width: '33%', color: 'white'}}>
                                 {props.downloadtext ? props.downloadtext : "Download"}
                             </Button>}
                         </td>
@@ -56,9 +54,7 @@ function MiniProject(props) {
                     <tr>
                         <td>
                             <p style={{textAlign: 'left', paddingLeft: '1rem', paddingRight: '1rem'}}>{props.desc}</p>
-                            {(props.download) && <Button color={'primary'} onClick={() => {
-                                window.location.href = props.download
-                            }} style={{width: '50%', marginBottom: '1rem'}}>
+                            {(props.download) && <Button color={'primary'} href={props.download} style={{width: '33%', color: "white"}}>
                                 {props.downloadtext ? props.downloadtext : "Download"}
                             </Button>}
                         </td>

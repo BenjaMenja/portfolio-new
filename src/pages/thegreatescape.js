@@ -20,7 +20,7 @@ function TheGreatEscape() {
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>The Great Escape</h1>
             {(width > 768 && height > 600) ? <img src={image} alt="A screenshot of the player character in the hallway leading to the living room, where her aunt awaits her." width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="A screenshot of the player character in the hallway leading to the living room, where her aunt awaits her." width={'75%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
             <br/>
-            <Button color='primary' size={'lg'} style={{marginBottom: '2rem'}} onClick={() => window.location.href='https://github.com/BenjaMenja/The-Great-Escape/releases/tag/v1.1.0-alpha'}>Download</Button>
+            <Button color='primary' size={'lg'} style={{marginBottom: '2rem', color: 'white'}} href={'https://github.com/BenjaMenja/The-Great-Escape/releases/tag/v1.2.0-beta'}>Download</Button>
             <Card className={'border-0'} style={{
                 background: bgColor,
                 color: '#FFFFFF',

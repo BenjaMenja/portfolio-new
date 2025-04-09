@@ -13,13 +13,10 @@ import {useEffect, useState} from "react";
 
 function Projects() {
     const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
     useEffect(() => {
         function handleResize() {
             const newwidth = window.innerWidth
-            const newheight = window.innerHeight
             setWidth(newwidth)
-            setHeight(newheight)
         }
         window.addEventListener('resize', handleResize)
     }, [])
@@ -61,19 +58,19 @@ function Projects() {
                      desc="A quiz application centered around the Pokemon video game series. Test your knowledge of all things Pokemon!"
                      project="pokequiz"
                      status={{isDone: 'Yes', role: "Programmer, Designer", tools: "HTML, CSS, TypeScript / Angular, Tailwind, Chart.js", dates: 'March 2025 - April 2025'}}/>
-            <Project title="Royal Siege" imgsrc={royalsiegelogo}
-                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. It is a work in progress game that features 16 unique characters, five maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
+            <Project title="Royal Siege" imgsrc={royalsiegelogo} imgwidth={'50%'}
+                     desc="A team-based MOBA game built in Minecraft using its mcfunction scripting language. Features 17 unique characters, five maps, two gamemodes, and original artwork and music. The game's direction and programming are lead by me."
                      project="royal-siege"
-                     status={{isDone: 'Yes', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - Present'}}/>
+                     status={{isDone: 'Yes', role: "Lead Developer, Lead Programmer, Lead Map Designer", tools: "mcfunction / Minecraft, Visual Studio Code, Blockbench", dates: 'December 2020 - January 2025'}}/>
             <Project title="TerraFirmaCraft: The Twilight Invasion" imgsrc={tfclogo}
                      desc="A survival, technology, and combat focused modpack for Minecraft Forge 1.7.10. Features a collection of mods wrapped together with custom scripts, configurations, and addons to create a challenging but rewarding survival experience."
                      project="tfc-ti"
                      status={{isDone: 'Yes', role: "Developer, Programmer", tools: "Java, ZenScript, JSON / Minecraft, Gradle", dates: 'February 2025 - March 2025'}}/>
-            <Project title="Blockle" imgsrc={blockleimg}
+            <Project title="Blockle" imgsrc={blockleimg} imgwidth={'50%'}
                      desc="A Wordle inspired guessing game where you have to guess the Minecraft block based on its properties."
                      project="blockle"
                      status={{isDone: 'Yes', role: "Programmer", tools: "Typescript, React / Playwright", dates: 'November 2024 - December 2024'}}/>
-            <Project title="Pokemon Blitz" imgsrc={pokemonblitzimg}
+            <Project title="Pokemon Blitz" imgsrc={pokemonblitzimg} imgwidth={'60%'}
                      desc="A bullet hell game made in the Dragonfly game engine. Features 3 playable Pokemon that players can maneuver through a course while dodging an endless wave of Pokeballs trying to capture you."
                      project="pokemon-blitz"
                      status={{isDone: 'Yes', role: "Programmer, ASCII Artist", tools: "C++ / Visual Studio", dates: 'February 2023 - March 2023'}}/>
@@ -100,9 +97,7 @@ function MiniProjectDisplay(props) {
                             <h4 style={{marginTop: '1rem'}}>Mini Projects</h4>
                         </td>
                         <td>
-                            <Button color="primary" onClick={() => {
-                                window.location.href = '/mini-projects'
-                            }}>
+                            <Button color="primary" style={{color: 'white'}} href={'/mini-projects'}>
                                 Learn More
                             </Button>
                         </td>
@@ -127,9 +122,7 @@ function MiniProjectDisplay(props) {
                             <h4 style={{marginTop: '1rem'}}>Mini Projects</h4>
                         </td>
                         <td>
-                            <Button color="primary" onClick={() => {
-                                window.location.href = '/mini-projects'
-                            }}>
+                            <Button color="primary" style={{color: 'white'}} href={'/mini-projects'}>
                                 Learn More
                             </Button>
                         </td>
