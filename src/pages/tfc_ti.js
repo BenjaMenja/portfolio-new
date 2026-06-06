@@ -4,31 +4,16 @@ import monoclecraft from '../images/monocle_crafting.png'
 import naturalstructure from '../images/natural_structure.png'
 import quest from '../images/tfctiquest.png'
 import {Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from '../hooks/useIsMobile';
+import { defaultCardStyle } from '../components/shared/cardStyle';
+
 function TFC_TI() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+    
     return (
         <div className={".text-light"}>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>TerraFirmaCraft: The Twilight Invasion</h1>
-            {(width > 768 && height > 600) ? <img src={image} alt="The TFC: TI Main Menu" width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="The TFC: TI Main Menu" width={'90%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <img src={image} alt="The TFC: TI Main Menu" width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Download</h3>
                 <p>Download is available <a href={'https://www.curseforge.com/minecraft/modpacks/terrafirmacraft-the-twilight-invasion'}>here</a> on CurseForge.</p>
                 <p>Additionally, the addon mod can be found <a href='https://github.com/BenjaMenja/tfctiaddon'>here</a>.</p>

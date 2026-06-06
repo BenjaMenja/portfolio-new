@@ -1,33 +1,17 @@
 import image from "../images/blockle-page.png";
-import {useEffect, useState} from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
+import { defaultCardStyle } from "../components/shared/cardStyle";
 import {Card} from "reactstrap";
 import playwright from "../images/playwright_script.gif";
 import filters from "../images/blockle_filter_page.png";
 
 function Blockle() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+    
     return (
         <>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Blockle</h1>
-            {(width > 768 && height > 600) ? <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={'33%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={'75%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <img src={image} alt="A screenshot of a completed Blockle game." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <p>
                     Blockle is a guessing game inspired by the <a href={"https://www.nytimes.com/games/wordle/index.html"}>Wordle</a> and <a href={"https://squirdle.fireblend.com/"}>Squirdle</a> games where you have to guess the <i>Minecraft</i> block based on its attributes.
                     Using the block's hardness, blast resistance, preferred tool, introduced version, and color, you have only 6 guesses to guess the block! Supports all blocks from the pre-classic era to the current <i>Minecraft</i> version.
@@ -61,15 +45,9 @@ function Blockle() {
                 </ul>
                 <p>More details on these filters can be found on the blockle page's dedicated <a href={"https://benjamenja.github.io/blockle/filters"}>filter guide</a>.</p><br/>
             </Card>
-            {(width > 768 && height > 600) ? <img src={filters} alt="A section of Blockle's filter page." width={'33%'} height={'auto'}/> : <img src={filters} alt="A section of Blockle's filter page." width={'75%'} height={'auto'}/>}
+            <img src={filters} alt="A section of Blockle's filter page." width={useIsMobile() ? '75%' : '33%'} height={'auto'}/>
 
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Playwright</h3>
                 <p>
                     To create a way to display each block and its attributes, a Block interface was designed in Typescript to store the block's name, display image, and its attributes. However, <i>Minecraft</i> does not have a public API or other means of grabbing this information easily.
@@ -78,7 +56,7 @@ function Blockle() {
                     which contained all of the required information needed to represent each block in Blockle.
                 </p>
             </Card>
-            {(width > 768 && height > 600) ? <img src={playwright} alt="A snippet of the playwright script accessing each block's page on the wiki." width={'33%'} height={'auto'}/> : <img src={playwright} alt="A snippet of the playwright script accessing each block's page on the wiki." width={'75%'} height={'auto'}/>}
+            <img src={playwright} alt="A snippet of the playwright script accessing each block's page on the wiki." width={useIsMobile() ? '75%' : '33%'} height={'auto'}/>
             <br/><br/>
         </>
     )

@@ -2,34 +2,17 @@ import image from "../images/merge-monastery-logo.png"
 import oldUI from "../images/merge-monastery-old-ui.webp"
 import newUI from "../images/merge-monastery-new-ui.png"
 import {Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
+import { defaultCardStyle } from "../components/shared/cardStyle";
 
 function MergeMonastery() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+    
     return (
         <>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Merge Monastery</h1>
-            {(width > 768) ? <img src={image} alt="Merge Monastery's Logo" width={'25%'} height={'auto'} style={{marginBottom: '5rem'}}/> :
-                <img src={image} alt="Merge Monastery's Logo" width={visualViewport.width * 0.75} height={'auto'} style={{marginBottom: '5rem'}}/>}
+            <img src={image} alt="Merge Monastery's Logo" width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '5rem'}}/>
 
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: '#FFFFFF',
-                margin: 'auto',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Introduction</h3>
                 <p><i>Merge Monastery </i>
                 is a merge game built in Unity and played on mobile devices through the Google Play Store and App Store. The goal is to merge various seeds, plants, and garden objects together to earn Qi

@@ -1,131 +1,83 @@
 import { Button, Dropdown } from "reactstrap";
-import { useEffect, useState } from "react";
+import { useIsMobile } from "../../hooks/useIsMobile";
+import { useState } from "react";
 import PDF from "../../pdf/Ben-Gelinas-Resume.pdf";
 
-function MyNavbar() {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
-  const [scroll, setScroll] = useState(window.scrollY);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  useEffect(() => {
-    function handleResize() {
-      const newwidth = window.innerWidth;
-      const newheight = window.innerHeight;
-      setWidth(newwidth);
-      setHeight(newheight);
+const NAV_LINKS = [
+    { label: 'Home', page: '/' },
+    { label: 'About', page: '/about' },
+    { label: 'Projects', page: '/projects' },
+    {
+        label: (
+            <a style={{ color: 'white', textDecoration: 'none' }} href={PDF} target="_blank" rel="noreferrer noopener">
+                Resume
+            </a>
+        )
     }
+]
 
-    function handleScroll() {
-      const newScroll = window.scrollY;
-      setScroll(newScroll);
-    }
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
-  }, []);
-  return (
-    <>
-      {width > 768 && height > 600 ? (
-        <>
-          <LargeNavbar scroll={scroll} />
-        </>
-      ) : (
-        <div className={"custom-navbar"}>
-          <div className={"custom-navbar-name"}>
+function NavbarBrand() {
+    return (
+        <div className="custom-navbar-name">
             <b>Ben Gelinas</b>
             <br />
-            <div className={"custom-navbar-subtitle"}>
-              Software Developer & Game Programmer
-            </div>
-          </div>
-          <Button
-            style={{ background: "#000000", border: "0px" }}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            <i className={"bi bi-list"}></i>
-          </Button>
-          {dropdownOpen && (
-            <Dropdown className={"small-dropdown"}>
-              <NavbarDropdownItem page={"/"}>Home</NavbarDropdownItem>
-              <NavbarDropdownItem page={"/about"}>About</NavbarDropdownItem>
-              <NavbarDropdownItem page={"/projects"}>
-                Projects
-              </NavbarDropdownItem>
-              <NavbarDropdownItem>
-                <a
-                  style={{ color: "white", textDecoration: "none" }}
-                  href={PDF}
-                  target={"_blank"}
-                  rel={"noreferrer noopener"}
-                >
-                  Resume
-                </a>
-              </NavbarDropdownItem>
-            </Dropdown>
-          )}
+            <div className="custom-navbar-subtitle">Software Developer & Game Programmer</div>
         </div>
-      )}
-    </>
-  );
+    )
+}
+
+function NavbarLink({ page, className, children }) {
+    return (
+        <div className={className}>
+            {page ? <a href={page}>{children}</a> : children}
+        </div>
+    )
 }
 
 function LargeNavbar() {
-  return (
-    <>
-      <div className={"custom-navbar"}>
-        <div className={"custom-navbar-name"}>
-          <b>Ben Gelinas</b>
-          <br />
-          <div className={"custom-navbar-subtitle"}>
-            Software Developer & Game Programmer
-          </div>
+    return (
+        <div className="custom-navbar">
+            <NavbarBrand />
+            <div className="custom-navbar-nav">
+                {NAV_LINKS.map(({ label, page }) => (
+                    <NavbarLink key={page ?? 'resume'} page={page} className="navbar-item">
+                        {label}
+                    </NavbarLink>
+                ))}
+            </div>
         </div>
-        <div className={"custom-navbar-nav"}>
-          <NavbarItem page={"/"}>Home</NavbarItem>
-          <NavbarItem page={"/about"}>About</NavbarItem>
-          <NavbarItem page={"/projects"}>Projects</NavbarItem>
-          <NavbarItem>
-            <a
-              style={{ color: "white", textDecoration: "none" }}
-              href={PDF}
-              target={"_blank"}
-              rel={"noreferrer noopener"}
+    )
+}
+
+function SmallNavbar() {
+    const [dropdownOpen, setDropdownOpen] = useState(false)
+
+    return (
+        <div className="custom-navbar">
+            <NavbarBrand />
+            <Button
+                style={{ background: '#000000', border: '0px' }}
+                onClick={() => setDropdownOpen(prev => !prev)}
             >
-              Resume
-            </a>
-          </NavbarItem>
+                <i className="bi bi-list" />
+            </Button>
+            {dropdownOpen && (
+                <Dropdown className="small-dropdown">
+                    {NAV_LINKS.map(({ label, page }) => (
+                        <NavbarLink key={page ?? 'resume'} page={page} className="navbar-dropdown-item">
+                            {label}
+                        </NavbarLink>
+                    ))}
+                </Dropdown>
+            )}
         </div>
-      </div>
-    </>
-  );
+    )
 }
 
-function NavbarDropdownItem(props) {
-  return (
-    <>
-      {props.page !== undefined ? (
-        <div className={"navbar-dropdown-item"}>
-          <a href={props.page}> {props.children}</a>
-        </div>
-      ) : (
-        <div className={"navbar-dropdown-item"}>{props.children}</div>
-      )}
-    </>
-  );
-}
+function MyNavbar() {
+    const isMobile = useIsMobile()
 
-function NavbarItem(props) {
-  return (
-    <>
-      {props.page !== undefined ? (
-        <div className={"navbar-item"}>
-          <a href={props.page}> {props.children}</a>
-        </div>
-      ) : (
-        <div className={"navbar-item"}>{props.children}</div>
-      )}
-    </>
-  );
+    return isMobile ? <SmallNavbar /> : <LargeNavbar />
 }
 
 export default MyNavbar;

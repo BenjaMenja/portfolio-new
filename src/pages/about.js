@@ -1,27 +1,16 @@
 import {Button, Col, List, Row} from "reactstrap";
 import Languages from "../components/About/langs";
-import {useEffect, useState} from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
 import DevTools from "../components/About/devtools";
 import Obfuscate from "react-obfuscate";
 
 function About() {
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
     return (
         <div style={{color: '#FFFFFF',marginTop: "5rem"}}>
-            {(width > 768 && height > 600) ? <AboutLargeScreen /> : <AboutSmallScreen />}
+            {useIsMobile() ? <AboutSmallScreen /> : <AboutLargeScreen />}
 
-            <Languages margin={'7rem'} width={width}/>
-            <DevTools width={width}/>
+            <Languages margin={'7rem'} isMobile={useIsMobile()}/>
+            <DevTools isMobile={useIsMobile()}/>
         </div>
     )
 }
@@ -56,20 +45,26 @@ export function ItchButton() {
     )
 }
 
+export function TextBlurb() {
+    return (
+        <p>
+            Hello! I'm Ben Gelinas, a software developer with experience in web and game development. I like to work on web applications, games, and other forms of software. I am always eager to take on challenges and learn new technologies to stay on top of the rapidly changing software industry.<br></br><br></br>
+            I have experience with languages such as C/C++, C#, Java, JavaScript, and Python. A full list of languages and development tools I use can be found below.<br></br><br></br>
+            Outside of project work, I also enjoy:
+            <List>
+                <li>Performing Music</li>
+                <li>Playing and analyzing games</li>
+                <li>Solving Puzzles</li>
+            </List>
+            If you would like to reach out, feel free to contact me via email or other socials!
+        </p>
+    )
+}
+
 function AboutLargeScreen() {
     return (<Row xs={'2'} style={{marginBottom: '3rem', width: '100%'}}>
         <Col style={{paddingLeft: '10%', textAlign: 'left'}}>
-            <p>
-                Hello! I'm Ben Gelinas, a software developer with experience in web and game development. I like to work on web applications, games, and other forms of software. I am always eager to take on challenges and learn new technologies to stay on top of the rapidly changing software industry.<br></br><br></br>
-                I have experience with languages such as C/C++, C#, Java, JavaScript, and Python. A full list of languages and development tools I use can be found below.<br></br><br></br>
-                Outside of project work, I also enjoy:
-                <List>
-                    <li>Performing Music</li>
-                    <li>Playing and analyzing games</li>
-                    <li>Solving Puzzles</li>
-                </List>
-                If you would like to reach out, feel free to contact me via email or other socials!
-            </p>
+            <TextBlurb />
         </Col>
         <Col>
             <h3>Contact me</h3>
@@ -87,17 +82,7 @@ function AboutLargeScreen() {
 function AboutSmallScreen() {
     return (
         <div className={"about-small-screen"}>
-            <p>
-            Hello! I'm Ben Gelinas, a software developer with experience in web and game development. I like to work on web applications, games, and other forms of software. I am always eager to take on challenges and learn new technologies to stay on top of the rapidly changing software industry.<br></br><br></br>
-            I have experience with languages such as C/C++, C#, Java, JavaScript, and Python. A full list of languages and development tools I use can be found below.<br></br><br></br>
-                Outside of project work, I also enjoy:
-                <ul>
-                    <li>Performing Music</li>
-                    <li>Playing and analyzing games</li>
-                    <li>Solving Puzzles</li>
-                </ul>
-                If you would like to reach out, feel free to contact me via email or other socials!
-            </p>
+            <TextBlurb />
             <div className={"contact-info"}>
                 <div className={"about-flex-vertical"}>
                     <h3><b>Contact me</b></h3>

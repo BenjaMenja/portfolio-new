@@ -3,31 +3,15 @@ import quiz_example from "../images/pokequiz-example.png"
 import settings from "../images/pokequiz-settings.png"
 import stats from "../images/pokequiz-stats.png"
 import {Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
+import { defaultCardStyle } from "../components/shared/cardStyle";
 function PokeQuiz() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+
     return (
         <div className={".text-light"}>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>PokeQuiz</h1>
-            {(width > 768 && height > 600) ? <img src={pokequiz} alt="The PokeQuiz home screen" width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={pokequiz} alt="The PokeQuiz home screen" width={'90%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <img src={pokequiz} alt="The PokeQuiz home screen" width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <Card className={'border-0'} style={defaultCardStyle}>
                 <h3>View</h3>
                 <p>Check out the PokeQuiz website <a href={'https://benjamenja.github.io/pokequiz/'} target="_blank" rel="noreferrer">here</a>.</p>
                 <h3>Introduction</h3>

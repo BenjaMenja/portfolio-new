@@ -1,30 +1,15 @@
 import image from '../images/pokemon-blitz.png'
 import {Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from '../hooks/useIsMobile';
+import { defaultCardStyle } from "../components/shared/cardStyle";
+
 function PokemonBlitz() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+
     return (
         <div>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Pokemon Blitz</h1>
-            {(width > 768 && height > 600) ? <img src={image} alt="An in-game screenshot showing a playable character dodging the endless waves of objects along with the HUD." width={'33%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="An in-game screenshot showing a playable character dodging the endless waves of objects along with the HUD." width={'75%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <img src={image} alt="An in-game screenshot showing a playable character dodging the endless waves of objects along with the HUD." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <Card className={'border-0'} style={defaultCardStyle}>
                 <p><i>Pokemon Blitz </i>
                 is a 2D bullet hell game built using my <a href={'/game-engine'}>ASCII C++ game engine</a>.
                 The goal is to survive as long as possible against the endless wave of flying Pokeballs and Voltorbs traveling across the map.

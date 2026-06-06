@@ -1,30 +1,14 @@
 import image from "../images/royal-siege-gallery/tdm.png"
 import {Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
+import { defaultCardStyle } from "../components/shared/cardStyle";
 function RoyalSiege() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+    
     return (
         <div>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Royal Siege</h1>
-            {(width > 768 && height > 600) ? <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={'75%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <Card className={'border-0'} style={defaultCardStyle}>
                 <p><i>Royal Siege </i>
                 is a team-based MOBA game built in <i>Minecraft</i> using the game's <a href="https://minecraft.wiki/w/Data_pack">data pack</a> and <a href="https://minecraft.wiki/w/Resource_pack">resource pack</a> system.
                     The goal of the game is to slay the opposing team's king using your character's unique set of weapons, abilities, and shops.</p>

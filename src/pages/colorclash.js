@@ -1,31 +1,14 @@
 import image from '../images/color-clash.png'
 import conditions from '../images/adaptive-time-delay-conditions.png'
 import {Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from '../hooks/useIsMobile';
+import { defaultCardStyle } from '../components/shared/cardStyle';
 function ColorClash() {
-    let bgColor = 'rgba(0,0,0,0)'
-    const [width, setWidth] = useState(window.innerWidth)
-    const [height, setHeight] = useState(window.innerHeight)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            const newheight = window.innerHeight
-            setWidth(newwidth)
-            setHeight(newheight)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
     return (
         <div>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Color Clash: Exploring Adaptive Time Delay in First Person Shooter Games</h1>
-            {(width > 768 && height > 600) ? <img src={image} alt="A screenshot of the blue player aiming at the red player." width={'50%'} height={'auto'} style={{marginBottom: '3rem'}}/> : <img src={image} alt="A screenshot of the blue player aiming at the red player." width={'90%'} height={'auto'} style={{marginBottom: '3rem'}}/>}
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <img src={image} alt="A screenshot of the blue player aiming at the red player." width={useIsMobile() ? '90%' : '50%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Publication</h3>
                 <p>Publication is available <a href={'https://digital.wpi.edu/concern/student_works/4f16c723m'}>here</a> on the WPI library.</p><br/>
                 <h3>What is it?</h3>
@@ -36,15 +19,9 @@ function ColorClash() {
                     which aims to maintain the improved fairness introduced by regular time delay while also improving QoE for all players. It achieves this by only turning on time delay in situations where it is needed. In this research, two
                     conditions were identified that represent player interaction, being line of sight and proximity.</p>
             </Card>
-            {(width > 768 && height > 600) ? <img src={conditions} alt="Graphic of the conditions required to activate adaptive time delay." width={'33%'} height={'auto'}/> : <img src={conditions} alt="Graphic of the conditions required to activate adaptive time delay." width={'75%'} height={'auto'}/>}
+            <img src={conditions} alt="Graphic of the conditions required to activate adaptive time delay." width={useIsMobile() ? '75%' : '33%'} height={'auto'}/>
             <br/><br/>
-            <Card className={'border-0'} style={{
-                background: bgColor,
-                color: "#FFFFFF",
-                marginLeft: '10vw',
-                width: '80vw',
-                textAlign: 'left'
-            }}>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Color Clash</h3>
                 <p>In order to test the efficacy of this modification, we designed <i>Color Clash</i>. Color Clash is a first person shooter game that follows a 1v1 deathmatch format, and was used as our platform to both
                     implement Adaptive Time Delay and test it. Using Unity with the Netcode for Game Objects library, we constructed an online multiplayer FPS game with essential game mechanics such as movement, jumping, shooting, and a scoring system.

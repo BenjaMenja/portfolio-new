@@ -1,70 +1,64 @@
 import {Button, Card} from "reactstrap";
-import {useEffect, useState} from "react";
+import { useIsMobile } from "../../hooks/useIsMobile";
+
+const miniCardStyle = {
+    width: '80%',
+    height: '100%',
+    marginLeft: '10%',
+    textAlign: 'center',
+    backgroundColor: 'rgba(136, 196, 236, 1)',
+    border: 'none'
+}
 
 function MiniProject(props) {
-    let bgColor = 'rgba(136, 196, 236, 1)'
-    const [width, setWidth] = useState(window.innerWidth)
-    useEffect(() => {
-        function handleResize() {
-            const newwidth = window.innerWidth
-            setWidth(newwidth)
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
+
+    const { title, imgsrc, desc, download, downloadtext } = props
+
+    const downloadButton = download && (
+        <Button color="primary" href={download} style={{ width: '33%', color: 'white' }}>
+            {downloadtext ?? 'Download'}
+        </Button>
+    )
+
     return (
-        <>
-            {(width > 768) ? <Card className={'shadow-lg project'} outline color="light" style={{
-                width: '80%',
-                height: '100%',
-                marginLeft: '10%',
-                textAlign: 'center',
-                backgroundColor: bgColor,
-                border: 'none'
-            }}>
-                <h2 style={{marginBottom: '1rem', marginTop: '1rem'}}>{props.title}</h2>
-                <table style={{width: '100%', tableLayout: 'fixed'}}>
-                    <tr>
-                        <td>
-                            <img src={props.imgsrc} width={'75%'} height={'auto'} alt={"Missing"}/>
-                        </td>
-                        <td>
-                            <p style={{textAlign: 'left', paddingLeft: '1rem', paddingRight: '1rem'}}>{props.desc}</p>
-                            {(props.download) && <Button color={'primary'} href={props.download} style={{width: '33%', color: 'white'}}>
-                                {props.downloadtext ? props.downloadtext : "Download"}
-                            </Button>}
-                        </td>
-                    </tr>
-                </table>
-            </Card> : <Card className={'shadow-lg project'} outline color="light" style={{
-                width: '80%',
-                height: '100%',
-                marginLeft: '10%',
-                marginBottom: '5rem',
-                textAlign: 'center',
-                backgroundColor: bgColor,
-                border: 'none'
-            }}>
-                <h2 style={{marginBottom: '1rem', marginTop: '1rem'}}>{props.title}</h2>
-                <table style={{width: '100%', tableLayout: 'fixed'}}>
-                    <tr>
-                        <td>
-                            <img src={props.imgsrc} width={'60%'} height={'auto'} alt={"Missing"}/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p style={{textAlign: 'left', paddingLeft: '1rem', paddingRight: '1rem'}}>{props.desc}</p>
-                            {(props.download) && <Button color={'primary'} href={props.download} style={{width: '33%', color: "white"}}>
-                                {props.downloadtext ? props.downloadtext : "Download"}
-                            </Button>}
-                        </td>
-                    </tr>
-                </table>
-            </Card>
+        <Card
+            className="shadow-lg project"
+            outline
+            color="light"
+            style={{ ...miniCardStyle, marginBottom: useIsMobile() ? '5rem' : undefined }}
+        >
+            <h2 style={{ margin: '1rem 0' }}>{title}</h2>
 
-            }
-
-        </>
+            <table style={{ width: '100%', tableLayout: 'fixed' }}>
+                <tbody>
+                    {useIsMobile() ? (
+                        <>
+                            <tr>
+                                <td>
+                                    <img src={imgsrc} width="60%" height="auto" alt="Missing" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style={{ textAlign: 'left', padding: '0 1rem' }}>{desc}</p>
+                                    {downloadButton}
+                                </td>
+                            </tr>
+                        </>
+                    ) : (
+                        <tr>
+                            <td>
+                                <img src={imgsrc} width="75%" height="auto" alt="Missing" />
+                            </td>
+                            <td>
+                                <p style={{ textAlign: 'left', padding: '0 1rem' }}>{desc}</p>
+                                {downloadButton}
+                            </td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
+        </Card>
     )
 }
 
