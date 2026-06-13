@@ -3,13 +3,13 @@ import oldUI from "../images/merge-monastery-old-ui.webp"
 import newUI from "../images/merge-monastery-new-ui.png"
 import {Card} from "reactstrap";
 import { useIsMobile } from "../hooks/useIsMobile";
-import { defaultCardStyle } from "../components/shared/cardStyle";
+import { defaultCardStyle, defaultProjectHeaderStyle } from "../components/shared/sharedStyles";
 
 function MergeMonastery() {
     
     return (
         <>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Merge Monastery</h1>
+            <h1 style={defaultProjectHeaderStyle()}>Merge Monastery</h1>
             <img src={image} alt="Merge Monastery's Logo" width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '5rem'}}/>
 
             <Card className={'border-0'} style={defaultCardStyle()}>

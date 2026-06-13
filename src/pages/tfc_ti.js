@@ -1,17 +1,17 @@
-import image from '../images/tfc_ti_menu2.png'
+import image from '../images/tfc_ti_menu.png'
 import monocleanvil from '../images/monocle_anvil.png'
 import monoclecraft from '../images/monocle_crafting.png'
 import naturalstructure from '../images/natural_structure.png'
 import quest from '../images/tfctiquest.png'
 import {Card} from "reactstrap";
 import { useIsMobile } from '../hooks/useIsMobile';
-import { defaultCardStyle } from '../components/shared/cardStyle';
+import { defaultCardStyle, defaultProjectHeaderStyle } from '../components/shared/sharedStyles';
 
 function TFC_TI() {
     
     return (
         <div className={".text-light"}>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>TerraFirmaCraft: The Twilight Invasion</h1>
+            <h1 style={defaultProjectHeaderStyle()}>TerraFirmaCraft: The Twilight Invasion</h1>
             <img src={image} alt="The TFC: TI Main Menu" width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
             <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Download</h3>

@@ -1,13 +1,13 @@
 import {Button, Card, Col, Row} from "reactstrap";
-import image from '../images/living_room_kitchen2.png'
+import image from '../images/living_room_kitchen.png'
 import { useIsMobile } from "../hooks/useIsMobile";
-import { defaultCardStyle } from "../components/shared/cardStyle";
+import { defaultCardStyle, defaultProjectHeaderStyle } from "../components/shared/sharedStyles";
 
 function TheGreatEscape() {
    
     return (
         <>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>The Great Escape</h1>
+            <h1 style={defaultProjectHeaderStyle()}>The Great Escape</h1>
             <img src={image} alt="A screenshot of the player character in the hallway leading to the living room, where her aunt awaits her." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
             <br/>
             <Button color='primary' size={'lg'} style={{marginBottom: '2rem', color: 'white'}} href={'https://github.com/BenjaMenja/The-Great-Escape/releases/tag/v1.2.0-beta'}>Download</Button>

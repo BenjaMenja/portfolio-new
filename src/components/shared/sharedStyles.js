@@ -7,3 +7,11 @@ export function defaultCardStyle() {
       textAlign: 'left'
   }
 }
+
+export function defaultProjectHeaderStyle() {
+  return {
+    color: '#FFFFFF', 
+    marginBottom: '3rem',
+    marginTop: "5rem"
+  }
+}

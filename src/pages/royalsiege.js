@@ -1,13 +1,18 @@
 import image from "../images/royal-siege-gallery/tdm.png"
+import throne_room_image from "../images/royal_siege_king.png"
+import hotbar_image from "../images/royal_siege_hotbar.png"
+import shop_image from "../images/royal_siege_shop.png"
+import forest_glen_image from "../images/royal_siege_forest_glen.png"
+import lobby_image from "../images/royal_siege_lobby.png"
 import {Card} from "reactstrap";
 import { useIsMobile } from "../hooks/useIsMobile";
-import { defaultCardStyle } from "../components/shared/cardStyle";
+import { defaultCardStyle, defaultProjectHeaderStyle } from "../components/shared/sharedStyles";
 
 function RoyalSiege() {    
     return (
         <div>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Royal Siege</h1>
-            <img src={image} alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <h1 style={defaultProjectHeaderStyle()}>Royal Siege</h1>
+            <img src={image} className='align-self-center' alt="A screenshot of the aqueducts and billboard of Colosseum, a Team Deathmatch map." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: "3rem"}}/>
             <Card className={'border-0'} style={defaultCardStyle()}>
                 <p><i>Royal Siege </i>
                     is a team-based MOBA game built in <i>Minecraft</i> using the game's <a href="https://minecraft.wiki/w/Data_pack">data pack</a> and <a href="https://minecraft.wiki/w/Resource_pack">resource pack</a> system.
@@ -35,11 +40,13 @@ function RoyalSiege() {
                     General Gameplay Loop
                 </h4>
                 <p>
-                    Royal Siege follows a simple core gameplay loop: Defeat's the opposing team's King first. Players start a match by pressing a button that randomizes teams and allows them to choose their character.
+                    Royal Siege follows a simple core gameplay loop: Enter the opposing team's base and defeat their king first. Players start a match by pressing a button that randomizes teams and allows them to choose their character.
                     All players choose their character at the same time, and players are free to swap teams with an opposing player if they so choose. Once all players have chosen, the match will start.
                     Players are transported to their respective bases on the battlefield, where they can begin to complete game objectives and engage in combat. If players are eliminated, they must wait to respawn back at their base.
                     Players can complete tasks outside of battling, such as strategize with their team, exchange money using the banking system, and position themselves accordingly to better prepare themselves for victory.
                 </p>
+                <img src={throne_room_image} className='w-50 align-self-center' alt="An in-game screenshot of the red team's throne room on the Forest Glen map." />
+                <i className='w-50 align-self-center text-center'>The red team's throne room in their base, where the king resides alongside its royal guards.</i>
                 <h4>
                     Combat
                 </h4>
@@ -65,6 +72,8 @@ function RoyalSiege() {
 
                     Ultimate abilities are powerful abilities that have a much longer cooldown that normal abilities, but can quickly turn the tide of battle. Each character has two potential ultimates, but must select one to use throughout a match.
                 </p>
+                <img src={hotbar_image} className='w-50 align-self-center' alt="An in-game screenshot of the Pirate character's item and ability loadout." />
+                <i className='w-50 align-self-center text-center'>An example item and ability loadout. This shows the default loadout for the Pirate character, with the item on the far right being their ultimate ability.</i>
                 <h4>
                     Currency
                 </h4>
@@ -85,6 +94,8 @@ function RoyalSiege() {
                     depending on the state of the game. For example, the shops are always visible, but players may not enter them unless they are actively in a match. However, the simplicity of a single button press allows players to 
                     quickly access important game elements in the blink of an eye.
                 </p>
+                <img src={shop_image} className='w-50 align-self-center' alt="An in-game screenshot of the Angel character's shop." />
+                <i className='w-75 align-self-center text-center'>A popup window that shows the Angel's shop, accessible with a simple, configurable hotkey press.</i>
                 <h4>
                     Gamemodes and Maps
                 </h4>
@@ -93,6 +104,8 @@ function RoyalSiege() {
                     The maps for classic are designed to provide a very loose lane style avenue for combat. Team deathmatch serves as a way to quickly jump into battle, where the goal is to simply reach the required amount of kills
                     before the other team. The maps for team deathmatch are designed in a more arena-like fashion, with many scattered features to battle in.
                 </p>
+                <img src={forest_glen_image} className='w-50 align-self-center' alt="An in-game overhead screenshot of the Forest Glen map using the nighttime setting." />
+                <i className='w-50 align-self-center text-center'>The classic mode map Forest Glen using the nighttime setting.</i>
                 <h4>
                     Lobby
                 </h4>
@@ -101,7 +114,8 @@ function RoyalSiege() {
                     Other activities are in place to allow players to pass the time if everyone hasn't arrived yet. Players can test their skills on an obstacle course, try out characters at the practice range,
                     or check out the character themed hotel rooms.
                 </p>
-
+                <img src={lobby_image} className='w-50 align-self-center' alt="An in-game screenshot of the initial spawnpoint in the lobby." />
+                <i className='w-50 align-self-center text-center'>The initial player spawnpoint in the lobby.</i>
                 <h3>Contributions:</h3>
                 <ul>
                     <li>Designed 17 unique characters and all major gameplay features</li>

@@ -2,12 +2,12 @@ import image from '../images/color-clash.png'
 import conditions from '../images/adaptive-time-delay-conditions.png'
 import {Card} from "reactstrap";
 import { useIsMobile } from '../hooks/useIsMobile';
-import { defaultCardStyle } from '../components/shared/cardStyle';
+import { defaultCardStyle, defaultProjectHeaderStyle } from '../components/shared/sharedStyles';
 function ColorClash() {
     return (
         <div>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Color Clash: Exploring Adaptive Time Delay in First Person Shooter Games</h1>
-            <img src={image} alt="A screenshot of the blue player aiming at the red player." width={useIsMobile() ? '90%' : '50%'} height={'auto'} style={{marginBottom: '3rem'}}/>
+            <h1 style={defaultProjectHeaderStyle()}>Color Clash: Exploring Adaptive Time Delay in First Person Shooter Games</h1>
+            <img src={image} alt="A screenshot of the blue player aiming at the red player." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
             <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>Publication</h3>
                 <p>Publication is available <a href={'https://digital.wpi.edu/concern/student_works/4f16c723m'}>here</a> on the WPI library.</p><br/>

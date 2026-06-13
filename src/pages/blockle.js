@@ -1,6 +1,6 @@
 import image from "../images/blockle-page.png";
 import { useIsMobile } from "../hooks/useIsMobile";
-import { defaultCardStyle } from "../components/shared/cardStyle";
+import { defaultCardStyle, defaultProjectHeaderStyle } from "../components/shared/sharedStyles";
 import {Card} from "reactstrap";
 import playwright from "../images/playwright_script.gif";
 import filters from "../images/blockle_filter_page.png";
@@ -9,7 +9,7 @@ function Blockle() {
     
     return (
         <>
-            <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>Blockle</h1>
+            <h1 style={defaultProjectHeaderStyle()}>Blockle</h1>
             <img src={image} alt="A screenshot of a completed Blockle game." width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
             <Card className={'border-0'} style={defaultCardStyle()}>
                 <p>

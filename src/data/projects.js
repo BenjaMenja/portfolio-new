@@ -1,5 +1,5 @@
 import saucerimg from '../images/saucer-shoot.png'
-import greatescapeimg from "../images/living_room_kitchen2.png";
+import greatescapeimg from "../images/living_room_kitchen.png";
 import royalsiegelogo from "../images/royal-siege-logo.png";
 import pokemonblitzimg from "../images/pokemon-blitz.png";
 import mergemonasteryimg from "../images/merge-monastery-logo.png"
