@@ -1,4 +1,5 @@
 import pokequiz from "../images/pokequiz.png"
+import pokequiz_editor from "../images/pokequiz_editor.png"
 import quiz_example from "../images/pokequiz-example.png"
 import settings from "../images/pokequiz-settings.png"
 import stats from "../images/pokequiz-stats.png"
@@ -11,7 +12,7 @@ function PokeQuiz() {
         <div className={".text-light"}>
             <h1 style={{color: '#FFFFFF', marginBottom: '3rem',marginTop: "5rem"}}>PokeQuiz</h1>
             <img src={pokequiz} alt="The PokeQuiz home screen" width={useIsMobile() ? '75%' : '33%'} height={'auto'} style={{marginBottom: '3rem'}}/>
-            <Card className={'border-0'} style={defaultCardStyle}>
+            <Card className={'border-0'} style={defaultCardStyle()}>
                 <h3>View</h3>
                 <p>Check out the PokeQuiz website <a href={'https://benjamenja.github.io/pokequiz/'} target="_blank" rel="noreferrer">here</a>.</p>
                 <h3>Introduction</h3>
@@ -28,24 +29,36 @@ function PokeQuiz() {
                 </p>
                 <img src={quiz_example} className='w-50 align-self-center' alt="Quiz Example" />
                 <h4>Data Fetching</h4>
-                <p>All data is obtained through <a href="https://pokeapi.co/">PokeAPI</a>, a free RESTful API that links to a database full of everything there is to know about the Pokemon series. I used <a href="https://github.com/PokeAPI/pokeapi-js-wrapper">pokeapi-js-wrapper</a>, a wrapper library that
-                fetch the desired data and provide built-in caching. This data is used to supply the material found on the various quizzes.
+                <p>
+                    All data is obtained through <a href="https://pokeapi.co/">PokeAPI</a>, a free RESTful API that links to a database full of everything there is to know about the Pokemon series. I used <a href="https://github.com/PokeAPI/pokeapi-js-wrapper">pokeapi-js-wrapper</a>, a wrapper library that
+                    fetch the desired data and provide built-in caching. This data is used to supply the material found on the various quizzes.
                 </p>
                 <h4>Settings</h4>
-                <p>PokeQuiz comes with an array of settings that let the user customize their quiz taking experience. The user can change global values such as the number of rounds as well as quiz specific values such as the amount of leeway given for answering certain questions.
+                <p>
+                    PokeQuiz comes with an array of settings that let the user customize their quiz taking experience. The user can change global values such as the number of rounds as well as quiz specific values such as the amount of leeway given for answering certain questions.
                 </p>
                 <img src={settings} className='w-25 align-self-center' alt="PokeQuiz settings popup" />
                 <h4>Stats Viewer</h4>
-                <p>When testing my knowledge of a subject, I like to receive feedback based on how well I did and where I can improve. PokeQuiz features a stats viewer for quizzes that require a set of responses per round. This stats viewer shows a breakdown of how well you performed
+                <p>
+                    When testing my knowledge of a subject, I like to receive feedback based on how well I did and where I can improve. PokeQuiz features a stats viewer for quizzes that require a set of responses per round. This stats viewer shows a breakdown of how well you performed
                     in certain categories, allowing the user to see where their strengths and weaknesses are. The generated chart can be downloaded with the click of a button.
                 </p>
                 <img src={stats} className='w-50 align-self-center' alt="PokeQuiz Stats Example" />
+                <h4>Editor</h4>
+                <p>
+                    A key feature I think about that other quiz websites lack is a quiz editor. While sites such as Sporcle allow users to create their own quizzes, Sporcle's
+                    nature of being a general quiz website lacks the specificity that a dedicated pokemon quiz application could have. The PokeQuiz editor allows
+                    users to build a pokemon quiz with as much or as little focus as desired. It features an import/export system, allowing users to export quizzes to share with friends
+                    as well as import quizzes to play them in the custom quiz player as well as to make additional edits.
+                </p>
+                <img src={pokequiz_editor} className='w-25 align-self-center' alt="PokeQuiz custom editor" />
                 <h3>Contributions</h3>
                 <ul>
                     <li>Built a quiz system to handle basic quiz functionalities</li>
                     <li>Extended the quiz system to make topic-specific quizzes</li>
                     <li>Utilized Angular and Tailwind to create styled components that encompass the page content</li>
                     <li>Used namespaced local storage to store persistent settings data in the browser</li>
+                    <li>Designed and built a customizable quiz editor for users to create quizzes to their heart's content</li>
                     <li>Generated charts using Chart.js that display the player's results in a visual format</li>
                     <li>Deployed application to GitHub Pages using the <a href="https://www.npmjs.com/package/angular-cli-ghpages">angular-cli-ghpages</a> package</li>
                 </ul>
