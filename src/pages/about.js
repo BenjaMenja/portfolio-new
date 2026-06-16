@@ -48,8 +48,14 @@ export function ItchButton() {
 export function TextBlurb() {
     return (
         <p>
-            Hello! I'm Ben Gelinas, a software developer with experience in web and game development. I like to work on web applications, games, and other forms of software. I am always eager to take on challenges and learn new technologies to stay on top of the rapidly changing software industry.<br></br><br></br>
-            I have experience with languages such as C/C++, C#, Java, JavaScript, and Python. A full list of languages and development tools I use can be found below.<br></br><br></br>
+            Hello! I'm Ben Gelinas, a software developer with a focus in games, simulations, and software that responds to human interaction. Some of my most substantial work can be found in museums and visitor centers nationwide,
+            including the <a href="https://www.civilandhumanrights.org/">National Center for Civil and Human Rights</a>, <a href="https://www.philadelphiafed.org/money-in-motion">Federal Reserve Bank of Philadelphia</a>, and the <a href="https://californiasciencecenter.org/">California Science Center</a>.<br/><br/>
+           
+            My interest for games and interactive software stems from my early exposure to video games for both entertainment and education. I was raised with access to computers,
+            and would often be found playing interactive video games for education. My curiosity about computers and games led me to explore the programming aspect of the video game <i>Minecraft</i> as I grew older. 
+            This interest persisted into my college years, and I began to focus on developing games and interactive software as a result.<br/><br/>
+            
+            Today, the ever-changing landscape of games and the endless stories than can be shared through interactive experiences fuel my interests in the field.<br/><br/>
             Outside of project work, I also enjoy:
             <List>
                 <li>Performing Music</li>
