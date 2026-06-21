@@ -58,10 +58,12 @@
   color: white;
   font-family: Serif, serif;
   font-size: 3rem;
+  text-shadow: 1px 1px black;
 }
 
 .custom-navbar-subtitle {
   font-size: 1.5rem;
+  text-shadow: 1px 1px black;
 }
 
 .custom-navbar-nav {

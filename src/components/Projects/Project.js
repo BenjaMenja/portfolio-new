@@ -15,13 +15,12 @@ function Project(props) {
     const bgColor = 'rgba(136, 196, 236, 1)'
 
     const { title, imgsrc, imgwidth, desc, project, status } = props
-    const { publisher, isDone, role, tools, dates } = status
+    const { publisher, role, tools, dates } = status
 
     const projectStatus = (
         <ProjectStatus
             isMobile={useIsMobile()}
             publisher={publisher}
-            isDone={isDone}
             role={role}
             tools={tools}
             dates={dates}
