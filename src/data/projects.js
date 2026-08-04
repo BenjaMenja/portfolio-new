@@ -9,7 +9,7 @@ import tfclogo from '../images/tfc_logo.png'
 import pokequiztitle from '../images/pokequiz-title.png'
 
 export const projectList = [
-      {
+    {
         title: 'Merge Monastery',
         imgsrc: mergemonasteryimg,
         desc: 'A merge game where you can merge seeds and plants to unlock garden structures to build your very own zen garden. Built in Unity and available in the Google Play and App store under the MassDiGi name.',

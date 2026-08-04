@@ -14,7 +14,7 @@ function Home() {
         <div style={{color: '#FFFFFF'}}>
             <div style={{marginLeft: '5vw', marginRight: '5vw'}}>
                 <p>Thank you for checking out my portfolio!</p>
-                <p>I'm Ben Gelinas, a software developer with experience in web and game development.</p>
+                <p>I'm Ben Gelinas, a software developer with experience in interactive applications and game development.</p>
                 <p>Feel free to take a look at some of my featured projects below, or learn more about me by pressing the About button!</p>
             </div>
             <br/>

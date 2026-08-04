@@ -48,8 +48,7 @@ export function ItchButton() {
 export function TextBlurb() {
     return (
         <p>
-            Hello! I'm Ben Gelinas, a software developer with a focus in games, simulations, and software that responds to human interaction. Some of my most substantial work can be found in museums and visitor centers nationwide,
-            including the <a href="https://www.civilandhumanrights.org/">National Center for Civil and Human Rights</a>, <a href="https://www.philadelphiafed.org/money-in-motion">Federal Reserve Bank of Philadelphia</a>, and the <a href="https://californiasciencecenter.org/">California Science Center</a>.<br/><br/>
+            Hello! I'm Ben Gelinas, a software developer with a focus in games, simulations, and software that responds to human interaction. Some of my most substantial work can be found in museums and visitor centers nationwide.<br/><br/>
            
             My interest for games and interactive software stems from my early exposure to video games for both entertainment and education. I was raised with access to computers,
             and would often be found playing interactive video games for education. My curiosity about computers and games led me to explore the programming aspect of the video game <i>Minecraft</i> as I grew older. 
