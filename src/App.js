@@ -16,6 +16,7 @@ import MiniProjects from "./pages/miniprojects";
 import Blockle from "./pages/blockle";
 import TFC_TI from './pages/tfc_ti';
 import PokeQuiz from './pages/pokequiz';
+import TigersJams from './pages/tigersjams';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                       <Route exact path={'/blockle'} element={<Blockle />} />
                       <Route exact path={'/tfc-ti'} element={<TFC_TI />} />
                       <Route exact path={'/pokequiz'} element={<PokeQuiz />} />
+                      <Route exact path={'/tigers-jams'} element={<TigersJams />} />
                   </Routes>
               </Router>
           </div>

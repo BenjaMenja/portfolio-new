@@ -7,8 +7,16 @@ import colorclashimg from "../images/color-clash.png"
 import blockleimg from "../images/blockle.png"
 import tfclogo from '../images/tfc_logo.png'
 import pokequiztitle from '../images/pokequiz-title.png'
+import tigersjamsimg from '../images/tigers-jams-admin.png'
 
 export const projectList = [
+    {
+        title: 'Tiger\'s Jams',
+        imgsrc: tigersjamsimg,
+        desc: 'A discord bot that plays music from a local music database. Supports shuffled playlists, search requests, and more!',
+        project: 'tigers-jams',
+        status: { role: 'Developer', tools: 'Python / Django, discord.py', dates: 'October 2026' }
+    },
     {
         title: 'Merge Monastery',
         imgsrc: mergemonasteryimg,

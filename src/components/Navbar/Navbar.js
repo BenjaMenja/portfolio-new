@@ -1,19 +1,19 @@
 import { Button, Dropdown } from "reactstrap";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { useState } from "react";
-import PDF from "../../pdf/Ben-Gelinas-Resume.pdf";
+// import PDF from "../../pdf/Ben-Gelinas-Resume.pdf";
 
 const NAV_LINKS = [
     { label: 'Home', page: '/' },
     { label: 'About', page: '/about' },
     { label: 'Projects', page: '/projects' },
-    {
-        label: (
-            <a style={{ color: 'white', textDecoration: 'none' }} href={PDF} target="_blank" rel="noreferrer noopener">
-                Resume
-            </a>
-        )
-    }
+    // {
+    //     label: (
+    //         <a style={{ color: 'white', textDecoration: 'none' }} href={PDF} target="_blank" rel="noreferrer noopener">
+    //             Resume
+    //         </a>
+    //     )
+    // }
 ]
 
 function NavbarBrand() {

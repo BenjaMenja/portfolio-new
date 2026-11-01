@@ -7,7 +7,7 @@ function Home() {
     const featuredProjects = [
         projectList.find(p => p.project === 'merge-monastery'),
         projectList.find(p => p.project === 'color-clash'),
-        projectList.find(p => p.project === 'the-great-escape')
+        projectList.find(p => p.project === 'tigers-jams')
     ]
 
     return (
